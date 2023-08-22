@@ -1,0 +1,1445 @@
+{
+    "README": {
+        "description": "The following is the overall data results collected for all three stages. It is split into the total 35 questions that passed through all three stages. Below we describe each variable",
+        "question": "The GPT generated question",
+        "stage1": {
+            "answer" : "The student's answer to the question presented above.",
+            "studentWhoAnswered": "Which of the 4 anonymized students (A, B, C, or D) answered this question"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "The no KB intelligent tutor's response given to the student in stage 3. This is the post-processed response, where affirmations and other phrases were removed.",
+            "gptPartialKBReplyPostEdits": "The partial KB intelligent tutor's response given to the student in stage 3. This is the post-processed response, where affirmations and other phrases were removed.",
+            "gptFullKBReplyPostEdits": "The full KB intelligent tutor's response given to the student in stage 3. This is the post-processed response, where affirmations and other phrases were removed.",
+            "domainExpertAReplyPostEdits" : "If domain expert A's response was the randomly selected response for comparison, this will be the post-processed response, where affirmations and other phrases were removed. Otherwise, it will be blank",
+            "domainExpertBReplyPostEdits" : "If domain expert B's response was the randomly selected response for comparison, this will be the post-processed response, where affirmations and other phrases were removed. Otherwise, it will be blank",
+            "domainExpertAReplyPreEdits" : "Domain expert A's raw response (before any processing has occurred) to the question-answer combination presented in stage 2.",
+            "domainExpertBReplyPreEdits" : "Domain expert B's raw response (before any processing has occurred) to the question-answer combination presented in stage 2.",
+            "gptNoKBReplyPreEdits" : "The no KB intelligent tutor's response given to the student in stage 3. This is the pre-processed response, before affirmations and other phrases were removed.",
+            "gptPartialKBReplyPreEdits": "The partial KB intelligent tutor's response given to the student in stage 3. This is the pre-processed response, before affirmations and other phrases were removed.",
+            "gptFullKBReplyPreEdits" : "The full KB intelligent tutor's response given to the student in stage 3. This is the pre-processed response, before affirmations and other phrases were removed."
+
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "Which domain expert's response was randomly selected in stage 3 to be compared to the intelligent tutors. This should reflect the domain expert with a non-blank post-processing string in stage 2",
+            "informationProvided" : "The \"Factual Information\" section for this particular question that was presented to students",
+            
+
+            "noKBvsDomainStudentA" : "If student A was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either no KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the no KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "partialKBvsDomainStudentA": "If student A was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either partial KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the partial KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "fullKBvsDomainStudentA": "If student A was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either full KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the full KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+
+            "noKBvsDomainStudentB" : "If student B was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either no KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the no KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "partialKBvsDomainStudentB": "If student B was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either partial KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the partial KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "fullKBvsDomainStudentB": "If student B was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either full KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the full KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+
+            "noKBvsDomainStudentC" : "If student C was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either no KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the no KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "partialKBvsDomainStudentC": "If student C was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either partial KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the partial KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "fullKBvsDomainStudentC": "If student C was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either full KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the full KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+
+            "noKBvsDomainStudentD" : "If student D was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either no KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the no KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "partialKBvsDomainStudentD": "If student D was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either partial KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the partial KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank.",
+            "fullKBvsDomainStudentD": "If student D was given the comparison of the domain expert versus the intelligent tutors, this will be a list of length 3 of the responses for which response (either full KB intelligent tutor or the domain expert) talked more like a teacher (index 0), understood the student (index 1), and was helpful to the student (index 2). \"A\" stands for \"Reply A\", meaning the full KB intelligent tutor was better, \"B\" stands for \"Reply B\", meaning the domain expert was betetr, and \"C\" stands for \"I cannot tell\", meaning the student could not discern if either had a better pedagogical ability. If the student was not given this question, this field will be blank."
+            
+        }
+    },
+    "q1": { 
+        "question": "Which of the following are major developments during the Gestation of AI era? a) McCulloch and Pitts' work on artificial neurons b) The Turing Test proposed by Alan Turing c) The development of knowledge-based AI systems d) The rise of deep learning algorithms",
+        "stage1": {
+            "answer" : "a, b. In 1943, McCulloch and Pitts proposed the first neural network for Boolean functions which was modeled after a neuron, and in 1950 Alan Turing published a paper where he proposed the Turing Test",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Great job! You correctly identified both a) McCulloch and Pitts' work on artificial neurons and b) The Turing Test proposed by Alan Turing as major developments during the Gestation of AI era.",
+            "gptPartialKBReplyPostEdits": "That's absolutely correct! You accurately identified McCulloch and Pitts' work on artificial neurons and the Turing Test proposed by Alan Turing as key developments during this period.",
+            "gptFullKBReplyPostEdits": "Correct! You identified the major developments during the Gestation of AI era accurately, which are McCulloch and Pitts' work on artificial neurons (a) and the Turing Test proposed by Alan Turing (b). ",
+            "domainExpertAReplyPostEdits" : "Correct. Both developments occurred during the Gestation of AI era.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Correct. Both developments occurred during the gestation of AI.",
+            "domainExpertBReplyPreEdits" : "That’s correct, well done on picking both of the correct options. McCulloch and Pitts’s work effectively produced a neural network for boolean functions. It was the first model of artificial neurons: each neuron took the response state on (1) or off (0) depending on the aggregation of binary inputs (i.e., stimulus). Two key limitations of the MP model was the need of a pre-determined threshold value and that it could not handle non-linearly separable functions, e.g., XOR.",
+            "gptNoKBReplyPreEdits" : "Great job! You correctly identified both a) McCulloch and Pitts' work on artificial neurons and b) The Turing Test proposed by Alan Turing as major developments during the Gestation of AI era. Your response demonstrates a clear understanding of the early foundation of AI. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "That's absolutely correct! Your answer reflects a strong understanding of the Gestation of AI era. You accurately identified McCulloch and Pitts' work on artificial neurons and the Turing Test proposed by Alan Turing as key developments during this period. Keep up the great work!",
+            "gptFullKBReplyPreEdits" : "Correct! You identified the major developments during the Gestation of AI era accurately, which are McCulloch and Pitts' work on artificial neurons (a) and the Turing Test proposed by Alan Turing (b). Your understanding of the timeline and the significance of these developments is on point! Keep up the good work!"
+
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "As per the video, A and B are correct as they are included in the Gestation of AI. C and D are incorrect as they correspond to other periods.",
+            
+
+            "noKBvsDomainStudentA" : ["B", "C", "C"],
+            "partialKBvsDomainStudentA": ["C", "A", "A"],
+            "fullKBvsDomainStudentA": ["C","C","C"],
+
+            "noKBvsDomainStudentB" : ["A","C","A"],
+            "partialKBvsDomainStudentB": ["A","C","A"],
+            "fullKBvsDomainStudentB": ["A","C","A"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q2": {
+        "question": "When an artificial neuron aggregates input values, what determines if the neuron fires or not? a) The number of input values b) The threshold value c) The sum of input values d) The types of connectives used in the propositional logic expression ",
+        "stage1": {
+            "answer" : "the answer is b: the threshold value because the artificial neuron is based on actual neurons that are activated/fired when an electrical threshold is met.   ",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're absolutely right! The threshold value is crucial in determining if the neuron fires or not. When the aggregated input values cross this threshold, the neuron is activated.",
+            "gptPartialKBReplyPostEdits": "That's correct! The threshold value indeed determines if the neuron fires or not. Your understanding aligns well with the biological basis of artificial neurons. ",
+            "gptFullKBReplyPostEdits": "That's correct! The threshold value determines if the neuron fires. However, you should also consider the sum of input values (c), as it is compared to the threshold to decide if the neuron fires or not.",
+            "domainExpertAReplyPostEdits" : "B is correct but so is C as the sum of the input values is compared to a threshold. Once the sum that acts like a nucleus exceed that threshold, the neurons fires.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "b is correct but so is c, the sum of the input values is compared to a threshold. Once the sum that acts like a nucleus exceed that threshold, the neurons fires.",
+            "domainExpertBReplyPreEdits" : "The correct answer is b) and c). The threshold value is compared against the aggregated value, which is the summation of input values. a) and d) does not determine the firing behaviour of an individual neuron. Whereas a) influences the complexity of the neuron model, d) is more relevant for a network of neurons and represented through the threshold value in the MP model.",
+            "gptNoKBReplyPreEdits" : "You're absolutely right! The threshold value is crucial in determining if the neuron fires or not. When the aggregated input values cross this threshold, the neuron is activated. Your understanding of the concept is spot on, and you made a great connection to real neurons. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "That's correct! The threshold value indeed determines if the neuron fires or not. Your understanding aligns well with the biological basis of artificial neurons. You grasped the main concept clearly, showing your understanding of a key aspect in the development of artificial intelligence. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! The threshold value determines if the neuron fires. However, you should also consider the sum of input values (c), as it is compared to the threshold to decide if the neuron fires or not."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "B and C are correct as the aggregate sum (C) must surpass the threshold (B) for activation to occur. A is incorrect as it is not the \"number of inputs\" values, but the magnitude of said values or the aggregate value of them. D is incorrect as neurons build these connectives and aren't fired by them.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["C","A","A"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["A","A","A"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q3": {
+        "question": "What functions does a biological neuron perform? a) Receive nerve impulses b) Process nerve impulses c) Transmit nerve impulses d) Integrate with other cells through chemical synapses",
+        "stage1": {
+            "answer" : "a,b,c. neurons can receive and transmit nerve impulses and so therefore must also be able to process nerve impulses",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You are correct about neurons being able to receive, process, and transmit nerve impulses. However, you didn't mention the integration with other cells through chemical synapses, which is also a significant function. Neurons communicate and interact with each other via synapses, enabling complex brain operations and learning processes.",
+            "gptPartialKBReplyPostEdits": "Great job! You are correct that neurons can receive (a), process (b), and transmit (c) nerve impulses. You might also want to consider (d) integration with other cells through chemical synapses, which is an essential part of how neurons communicate and function within a network.",
+            "gptFullKBReplyPostEdits": "That's correct! Neurons perform functions a, b, and c; they receive, process, and transmit nerve impulses.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Nice justification on arriving at the three correct options, you almost got it right; however, D is also correct. The biological neuron receives nerve impulses from other neurons through its dendrites, and transmits nerve impulses to other neurons through its axon and synapses. Neurons communicate with each other at synapses. The cell body carries out the processing of nerve impulses.",
+            "domainExpertAReplyPreEdits" : "Correct that a neuron receives, processes and transmits nerve pulses but keep in mind, it also communicates with other neurons to integrate and compile information.",
+            "domainExpertBReplyPreEdits" : "Nice justification on arriving at the three correct options, you almost got it right; d) is also correct. The biological neuron receives nerve impulses from other neurons through its dendrites, and transmits nerve impulses to other neurons through its axon and synapses. Neurons communicate with each other at synapses. The cell body carries out the processing of nerve impulses.",
+            "gptNoKBReplyPreEdits" : "You are correct about neurons being able to receive, process, and transmit nerve impulses. However, you didn't mention the integration with other cells through chemical synapses, which is also a significant function. Neurons communicate and interact with each other via synapses, enabling complex brain operations and learning processes.",
+            "gptPartialKBReplyPreEdits": "Great job! You are correct that neurons can receive (a), process (b), and transmit (c) nerve impulses. You might also want to consider (d) integration with other cells through chemical synapses, which is an essential part of how neurons communicate and function within a network. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Neurons perform functions a, b, and c; they receive, process, and transmit nerve impulses. You demonstrated a clear understanding of these primary functions of a neuron. Great job!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and C are correct and are mentioned in the video. D, though not mentioned explicitly in the video, has the potential to be true depending on the context. If said \"cells\" are assumed to be other neurons, this would be true; if this isn't assumed, it would be false.",
+            
+            "noKBvsDomainStudentA" : ["C","A","A"],
+            "partialKBvsDomainStudentA": ["A","A","A"],
+            "fullKBvsDomainStudentA": ["A","C","B"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["B","C","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+        }
+    },
+    "q4": {
+        "question": "In Alan Turing's \"Computing Machinery and Intelligence,\" which concepts were laid as ground for AI? a) Language b) Knowledge c) Learning d) Understanding ",
+        "stage1": {
+            "answer" : "all of the above (a, b, c, d) as he had a clear vision for a full ai agenda",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! Alan Turing's vision for AI encompassed all aspects (a, b, c, d). He believed AI could potentially understand and process language, acquire knowledge, learn from experience, and exhibit a deep understanding of complex concepts.",
+            "gptPartialKBReplyPostEdits": "You are absolutely correct! Turing's paper laid the groundwork for AI. He touched upon various concepts like language, knowledge, learning, and understanding, which formed the basis for the development of AI and its various subfields.",
+            "gptFullKBReplyPostEdits": "That's correct! Alan Turing laid the ground for major AI concepts including language, knowledge, learning, and understanding in his paper \"Computing Machinery and Intelligence.\" Your response demonstrates a solid understanding of Turing's contribution to the field of AI.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, well done! Alan Turing’s seminal paper laid out language, knowledge, learning, and understanding as ground for artificial intelligence. It also introduced the Turing Test to the public. It’s a fascinating paper with many insights and observations, still relevant today. What’s more, it’s very readable and you can find the original copy online – I’d highly recommend you check it out!",
+            "domainExpertAReplyPreEdits" : "Correct! Alan Turing was a visionary scientist who predicted the future of AI.",
+            "domainExpertBReplyPreEdits" : "That’s correct, well done! Alan Turing’s seminal paper laid language, knowledge, learning, and understanding as ground for artificial intelligence. It also introduced the Turing Test to the public. It’s a fascinating paper with many insights and observations, still relevant today. What’s more, it’s very readable and you can find the original copy online – I’d highly recommend you checking it out!",
+            "gptNoKBReplyPreEdits" : "That's correct! Alan Turing's vision for AI encompassed all aspects (a, b, c, d). He believed AI could potentially understand and process language, acquire knowledge, learn from experience, and exhibit a deep understanding of complex concepts. Your answer accurately reflects Turing's broad AI agenda. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "You are absolutely correct! Turing's paper laid the groundwork for AI. He touched upon various concepts like language, knowledge, learning, and understanding, which formed the basis for the development of AI and its various subfields. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Alan Turing laid the ground for major AI concepts including language, knowledge, learning, and understanding in his paper \"Computing Machinery and Intelligence.\" Your response demonstrates a solid understanding of Turing's contribution to the field of AI. Keep up the good work!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "All of the above are correct, are outlined by \"Computing Machinery and Intelligence,\" and are detailed in the video.",
+
+            "noKBvsDomainStudentA" : ["C","C","B"],
+            "partialKBvsDomainStudentA": ["A","C","B"],
+            "fullKBvsDomainStudentA": ["C","C","B"],
+
+            "noKBvsDomainStudentB" : ["A","A","A"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["A","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+        }
+    },
+    "q5": {
+        "question": "Which AI researchers proposed the summer research project on AI at Dartmouth college in 1956? a) John McCarthy b) Marvin Minsky c) Nathaniel Rochester d) Claude Shannon",
+        "stage1": {
+            "answer" : "a. it was proposed by john mccarthy but joined by the other three.",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct, John McCarthy proposed the project and all of them were involved. Just remember to mention that all four researchers (John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon) were the primary organizers of the summer project, marking the beginning of AI as a field.",
+            "gptPartialKBReplyPostEdits": "You are correct that John McCarthy proposed the project, and the other three researchers played important roles in organizing and shaping the project. Your answer would have been more complete if you mentioned that all four researchers (a, b, c, and d) collaborated in proposing the summer research project.",
+            "gptFullKBReplyPostEdits": "You're correct! John McCarthy proposed the summer research project at Dartmouth college, and it was joined by Marvin Minsky, Nathaniel Rochester, and Claude Shannon. Your answer accurately identified McCarthy's role and acknowledged the collaboration with the other researchers.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Coining the term artificial intelligence, McCarthy could indeed be listed as the main organizer of the gathering at Dartmouth College in 1956. However, the three other researchers played an important role in the organization as well and, therefore, are often considered organizers as well. The correct answer should have been all options: a), b), c), and d).",
+            "domainExpertAReplyPreEdits" : "Correct. The Dartmouth summer research project on AI attracted researchers for the first time to talk about AI. That’s where McCarthy coined the term artificial intelligence.",
+            "domainExpertBReplyPreEdits" : "Coining the term artificial intelligence, McCarthy could indeed be listed as the main organizer of the gathering at Dartmouth College in 1956. However, the three other researchers played an important role in the organization as well, and therefore are often considered organizers as well. The correct answer should have been all options: a), b), c), and d).",
+            "gptNoKBReplyPreEdits" : "That's correct, John McCarthy proposed the project and all of them were involved. Just remember to mention that all four researchers (John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon) were the primary organizers of the summer project, marking the beginning of AI as a field. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "You are correct that John McCarthy proposed the project, and the other three researchers played important roles in organizing and shaping the project. Your answer would have been more complete if you mentioned that all four researchers (a, b, c, and d) collaborated in proposing the summer research project.",
+            "gptFullKBReplyPreEdits" : "You're correct! John McCarthy proposed the summer research project at Dartmouth college, and it was joined by Marvin Minsky, Nathaniel Rochester, and Claude Shannon. Your answer accurately identified McCarthy's role and acknowledged the collaboration with the other researchers. Great job!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "The proposal was created by all four researchers (see the original proposal here). Therefore, it is all of the above.",
+
+            "noKBvsDomainStudentA" : ["B","C","B"],
+            "partialKBvsDomainStudentA": ["A","A","A"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["B","A","A"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q6": {
+        "question": "When did the Gestation of AI era occur? a) Early 1940s b) Late 1950s c) Mid-1960s d) Early 1980s",
+        "stage1": {
+            "answer" : "answer is a and b: th easyly 1940's until the late 1950's is when the gestation ai era occurred as it was mostly logic and knowledge based ai",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct, the Gestation of AI era did occur from the early 1940s to the late 1950s. Your mention of logic and knowledge-based AI relates more to the early AI development. To make your answer more complete, include examples like Turing's work on theoretical computation and early AI conferences held during this era.",
+            "gptPartialKBReplyPostEdits": "Correct, the Gestation of AI era occurred during the early 1940s to late 1950s. The era was primarily based on propositional logic, but the statement about \"knowledge-based AI\" is not accurate as it refers to the knowledge-based AI era that started later in the 1960s. ",
+            "gptFullKBReplyPostEdits": "That's correct! The Gestation of AI era occurred in the early 1940s to late 1950s, involving the development of artificial neurons and concepts by McCulloch, Pitts, and Turing. Remember that this stage laid the groundwork for AI but didn't fully incorporate domain knowledge yet.",
+            "domainExpertAReplyPostEdits" : "Indeed, the Gestation of AI was from the 1940s til the end of the 1950s. However, note that logic and knowledge-based AI did not occur until the 1960s-1990s. The Gestation of AI saw events like the Dartmouth meeting, Alan Turing's paper and talks about AI, Samuel's checkers, and McCulloch and Pitts' neuron. Logical agents were not yet closely examined though.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Indeed, 1940s till the end of the 50s saw the gestation of AI. However, note that logic and knowledge-based AI did not occur till the 1960s-90s. The gestation of AI saw events like the Dartmouth meeting, Alan Turing paper and talks about AI, Samuel Checkers, McCulloh and Pitts but not about logical agents.",
+            "domainExpertBReplyPreEdits" : "Your answer is correct, the Gestation of AI was between 1943 (when McCulloch and Pitts proposed their model) and 1955 as defined by Stuart Russell and Peter Norvig. However, nowledge-based systems came later in the 1960s in an era known as AI Winter. In this era, we saw interest and funding in artificial intelligence dipping due to models not scaling to and performing well on real-world, large and complex problems.",
+            "gptNoKBReplyPreEdits" : "That's correct, the Gestation of AI era did occur from the early 1940s to the late 1950s. Your mention of logic and knowledge-based AI relates more to the early AI development. To make your answer more complete, include examples like Turing's work on theoretical computation and early AI conferences held during this era.",
+            "gptPartialKBReplyPreEdits": "Correct, the Gestation of AI era occurred during the early 1940s to late 1950s. The era was primarily based on propositional logic, but the statement about \"knowledge-based AI\" is not accurate as it refers to the knowledge-based AI era that started later in the 1960s.",
+            "gptFullKBReplyPreEdits" : "That's correct! The Gestation of AI era occurred in the early 1940s to late 1950s, involving the development of artificial neurons and concepts by McCulloch, Pitts, and Turing. Remember that this stage laid the groundwork for AI but didn't fully incorporate domain knowledge yet. Good job!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "The Gestation of Artificial Intelligence period began in approximately 1943 with the McCulloch-Pitts neuron (A) and transitioned to the Early Enthusiasm and Expectations era in the 1950s. As the term \"Late 1950s\" and the transition time of the eras are ambiguous, B can be correct or incorrect depending on the justification. C and D cannot be correct as these periods are far too late.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["B","A","B"],
+            "partialKBvsDomainStudentB": ["C","C","B"],
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q7": {
+        "question": "Which notable AI program was developed by Arthur Samuel in 1956? a) A checkers playing program b) IBM Deep Blue c) SHRDLU d) Shakey the robot ",
+        "stage1": {
+            "answer" : "a. he developed a checkers playing program that was a precursor to some of the other options.",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! Arthur Samuel developed a checkers playing program, which was an early example of AI and machine learning. It laid the foundation for more advanced AI systems and games in the future like the ones mentioned.",
+            "gptPartialKBReplyPostEdits": "That's correct! Arthur Samuel developed a checkers playing program in 1956. Your answer is accurate but could be improved by mentioning that his work laid the foundation for future game-playing AI systems like IBM Deep Blue.",
+            "gptFullKBReplyPostEdits": "That's correct! Arthur Samuel developed a checkers playing program in 1956 that used reinforcement learning, allowing the machine to self-learn. This was an important milestone in AI and game theory, paving the way for more advanced AI systems like IBM Deep Blue and Deepmind's AlphaGo later on.",
+            "domainExpertAReplyPostEdits" : "Correct. Furthermore, Samuel’s checkers program was even shown on TV. It used reinforcement learning and is considered an important milestone in game theory and AI history.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Correct. Samuel’s checkers program was even shown on TV. It used reinforcement learning. It is considered as an important milestone in game theory and AI history.",
+            "domainExpertBReplyPreEdits" : "That’s correct, well done! Indeed, Shakey and SHRDLU came roughly a decade after the checkers program, and IBM Deep Blue came much later than all around the end of 90s. Isn’t it fascinating how much progress we’ve made in 60 years? We now have robots operating on Mars soil, and Go and Chess agents who can crush human players. What’s next?",
+            "gptNoKBReplyPreEdits" : "That's correct! Arthur Samuel developed a checkers playing program, which was an early example of AI and machine learning. It laid the foundation for more advanced AI systems and games in the future like the ones mentioned. Your answer is accurate, keep up the good work!",
+            "gptPartialKBReplyPreEdits": "That's correct! Arthur Samuel developed a checkers playing program in 1956. Your answer is accurate but could be improved by mentioning that his work laid the foundation for future game-playing AI systems like IBM Deep Blue. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Arthur Samuel developed a checkers playing program in 1956 that used reinforcement learning, allowing the machine to self-learn. This was an important milestone in AI and game theory, paving the way for more advanced AI systems like IBM Deep Blue and Deepmind's AlphaGo later on."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "The only thing Arthur Samuel worked on in this list was A, the checkers playing program. It is worth noting that he was developing it through multiple years and that this was not the only time he focused on it.",
+
+            "noKBvsDomainStudentA" : ["C","A","C"],
+            "partialKBvsDomainStudentA": ["B","C","C"],
+            "fullKBvsDomainStudentA": ["A","A","A"],
+            
+            "noKBvsDomainStudentB" : ["A","A","A"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["A","C","A"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q8": {
+        "question": "What programming language did John McCarthy invent in 1958 for AI research? a) Lisp b) Python c) Java d) C++",
+        "stage1": {
+            "answer" : "python because it's the simplest language to use for machine learning and ai research",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "While Python is indeed popular for AI research today, the correct answer is a) Lisp. John McCarthy invented Lisp in 1958 specifically for AI research. Python was introduced in 1991 and gained popularity in AI later on.",
+            "gptPartialKBReplyPostEdits": "Actually, the correct answer is a) Lisp. John McCarthy invented Lisp in 1958 specifically for AI research. Python, while being a popular language for AI and machine learning today, was not developed until the late 1980s.",
+            "gptFullKBReplyPostEdits": "The correct answer is actually a) Lisp. While Python is a popular choice for AI research today, it was not invented until 1991. In 1958, John McCarthy invented Lisp specifically for AI research, and it dominated the field for about 30 years.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Although I agree with your stance on Python, McCarthy invented the Lisp programming language in 1958. It was a high-level language and played a crucial role in the development of artificial intelligence systems in the years to come. Python was instead invented in the early 1990s, a few years before Java to many people’s surprise.",
+            "domainExpertAReplyPreEdits" : "While Python is widely used nowadays in AI, the language that dominated AI for decades was Lisp, invented by McCarthy. ",
+            "domainExpertBReplyPreEdits" : "Although I agree with your stance on Python, McCarthy invented the Lisp programming language in 1958. It was a high-level language and played a crucial role in the development of artificial intelligence systems in the years to come. Python was instead invented in the early 90s, a few years before Java to many people’s surprise.",
+            "gptNoKBReplyPreEdits" : "While Python is indeed popular for AI research today, the correct answer is a) Lisp. John McCarthy invented Lisp in 1958 specifically for AI research. Python was introduced in 1991 and gained popularity in AI later on.",
+            "gptPartialKBReplyPreEdits": "Actually, the correct answer is a) Lisp. John McCarthy invented Lisp in 1958 specifically for AI research. Python, while being a popular language for AI and machine learning today, was not developed until the late 1980s.",
+            "gptFullKBReplyPreEdits" : "The correct answer is actually a) Lisp. While Python is a popular choice for AI research today, it was not invented until 1991. In 1958, John McCarthy invented Lisp specifically for AI research, and it dominated the field for about 30 years."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "John McCarthy invested Lisp (A) and none other of the programming languages. It occurred over multiple years however and was not made in only a single year.",
+
+            "noKBvsDomainStudentA" : ["A","A","C"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["C","A","C"],
+            
+            "noKBvsDomainStudentB" : ["A","A","A"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q9": {
+        "question": "What was one of the main reasons for the decline in interest in AI in the 1960s? A. Perceptron was limited to linear problems B. Early AI systems worked well with large and complex problems C. Funding for AI research increased significantly D. Early AI systems were developed on toy examples",
+        "stage1": {
+            "answer" : "c. because there were so many innovations during this time, funding for the research must have significantly increased",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Actually, the correct answer is A. Perceptron was limited to linear problems. The decline in interest during the 1960s was due to limitations in AI systems and disappointing results. Increased funding was not a primary reason for the decline during this time.",
+            "gptPartialKBReplyPostEdits": "Your answer isn't completely accurate. The decline in interest during the 1960s was mainly due to the limitations of AI systems like Perceptron and their inability to solve complex problems. Funding for AI research did not significantly increase during this period, which contributed to the AI Winter.",
+            "gptFullKBReplyPostEdits": "Actually, the correct answer is A and D. During the 1960s, interest in AI waned due to the limitations of early AI systems, such as the perceptron's inability to handle non-linear problems, and their development on toy examples. As a result, funding for AI research was reduced significantly, not increased.",
+            "domainExpertAReplyPostEdits" : "The interest in AI declined because most AI systems were developed for toy problems and didn’t scale to large, real-world problems. Furthermore, the perceptron ability was limited to linear problems. Hence, A and D.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "The interest in AI declined because most of AI systems were developed for toy problem and didn’t scale to large real-world problems. Furthermore, the perceptron ability was limited to linear problems. Hence, A, and D.",
+            "domainExpertBReplyPreEdits" : "I hear you, but why would a increase for funding for research cause a decline in interest in artificial intelligence? The correct answer is a) and d), as Perceptron emerged as a dominant model yet it was limited to lineary-separable data and most of the early systems were developed and tested on toy examples, and did not scale to real-world examples with large and complex data.",
+            "gptNoKBReplyPreEdits" : "Actually, the correct answer is A. Perceptron was limited to linear problems. The decline in interest during the 1960s was due to limitations in AI systems and disappointing results. Increased funding was not a primary reason for the decline during this time.",
+            "gptPartialKBReplyPreEdits": "Your answer isn't completely accurate. The decline in interest during the 1960s was mainly due to the limitations of AI systems like Perceptron and their inability to solve complex problems. Funding for AI research did not significantly increase during this period, which contributed to the AI Winter.",
+            "gptFullKBReplyPreEdits" : "Actually, the correct answer is A and D. During the 1960s, interest in AI waned due to the limitations of early AI systems, such as the perceptron's inability to handle non-linear problems, and their development on toy examples. As a result, funding for AI research was reduced significantly, not increased."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A and D are accurate and were both detailed in the video. B and C are incorrec as they are not logical for this question.",
+
+            "noKBvsDomainStudentA" : ["C","C","C"],
+            "partialKBvsDomainStudentA": ["B","C","C"],
+            "fullKBvsDomainStudentA": ["C","A","A"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["B","A","B"],
+            "fullKBvsDomainStudentB": ["C","C","C"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q10": {
+        "question": "What were Minsky's students working on between 1963 and early 1970, which helped solve problems in algebra, integrals, and geometry? a) Neural networks b) SHRDLU c) Microworlds d) Adaline",
+        "stage1": {
+            "answer" : "(c) his students at mit worked on microworlds to solve these problems",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! Minsky's students indeed worked on microworlds to solve problems in algebra, integrals, and geometry. However, don't forget that some also worked on SHRDLU, a natural language understanding system developed by Terry Winograd. So, both (b) and (c) are the right choices for this question.",
+            "gptPartialKBReplyPostEdits": "That's correct! Minsky's students worked on Microworlds, which allowed them to focus on specific problem domains and create AI programs to solve complex problems in algebra, integrals, and geometry. This approach helped advance AI research during that time.",
+            "gptFullKBReplyPostEdits": "That's correct! Minsky's students worked on Microworlds to solve problems in algebra, integrals, and geometry. These simplified environments allowed researchers to focus on specific aspects of AI and problem-solving, which contributed to the development of AI techniques and systems.",
+            "domainExpertAReplyPostEdits" : "Correct. Several of Minsky’s students worked on small “worlds,” which demonstrated the ability of logical agents in mathematics.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Correct. Several of Minsky’s students worked on small “worlds” which demonstrated the ability of logical agents in mathematics.",
+            "domainExpertBReplyPreEdits" : "That’s partially correct, the correct answers are b) and c). Microworlds is a series of problems in limited domains such as algebra and geomery. SHRDLU, a progam written in MIT by Winograd attempted to respond to basic natural language commands in the blocks world.",
+            "gptNoKBReplyPreEdits" : "That's correct! Minsky's students indeed worked on microworlds to solve problems in algebra, integrals, and geometry. However, don't forget that some also worked on SHRDLU, a natural language understanding system developed by Terry Winograd. So, both (b) and (c) are the right choices for this question. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "That's correct! Minsky's students worked on Microworlds, which allowed them to focus on specific problem domains and create AI programs to solve complex problems in algebra, integrals, and geometry. This approach helped advance AI research during that time. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Minsky's students worked on Microworlds to solve problems in algebra, integrals, and geometry. These simplified environments allowed researchers to focus on specific aspects of AI and problem-solving, which contributed to the development of AI techniques and systems. Your answer was accurate, and you demonstrated a good understanding of this part of AI history. Keep up the good work!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "Minsky's students developed Microworlds during this time (C). B is incorrect; although Terry Winograd developed SHRDLU at MIT during this time period, he was not a student of Minsky (therefore, it is not a Minsky student Microworld) and he was advised by Papert. The video also never credits SHRDLU with being a Minsky Microworld. A and D are not relevant.",
+
+            "noKBvsDomainStudentA" : ["B","B","C"],
+            "partialKBvsDomainStudentA": ["A","A","A"],
+            "fullKBvsDomainStudentA": ["A","A","A"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["A","B","B"],
+            "fullKBvsDomainStudentB": ["A","A","A"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q11": {
+        "question": "What was the result of incorporating domain knowledge into AI systems? A. Creation of expert systems B. AI research slowed down C. Focus shifted to AI in gaming D. AI systems were able to handle uncertainty",
+        "stage1": {
+            "answer" : "a, d. because ai have more information now, they must be performing better, and systems must be becoming more advanced.",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You are correct that A. Creation of expert systems and D. AI systems were able to handle uncertainty are the results of incorporating domain knowledge. Your reasoning reflects a good understanding of AI advancement. Just note that the focus on AI in gaming also increased, so C could be a valid answer too.",
+            "gptPartialKBReplyPostEdits": "You are correct that incorporating domain knowledge led to the creation of expert systems (A). However, option D is not accurate, as it was the development of techniques like probabilistic reasoning that allowed AI systems to handle uncertainty. Hence, the right combination would have been A and C.",
+            "gptFullKBReplyPostEdits": "While A (Creation of expert systems) is correct, D is not accurate. Incorporating domain knowledge did help create expert systems, but they still couldn't handle uncertainty. AI research began focusing on other approaches like neural networks, probability, and machine learning to address this limitation.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Your intuition is correct; however, a) is the only correct answer. b) was a precursor to the shift to knowledge-based artificial intelligence systems from earlier mathematical artificial neural network (ANN) models like the Perceptron. Knowledge-based systems’ biggest limitations included not being able to handle uncertainty and not being able to learn from experience. This partially led to the return of neural networks in the early 1990s.",
+            "domainExpertAReplyPreEdits" : "While the incorporation of domain knowledge led to expert systems, those were not able to handle uncertainty that a probabilistic approach would bring. Hence, A. only.",
+            "domainExpertBReplyPreEdits" : "Your intuition is correct, however a) is the only correct answer. b) was a precursor to the shift to knowledge-based artificial intelligence systems from earlier mathematical artificial neural network (ANN) models like the Perceptron. Knowledge-based systems’ biggest limitations included not being able to handle uncertainty and not being able to learn from experience. This partially led to the return of neural networks in the early 90s.",
+            "gptNoKBReplyPreEdits" : "You are correct that A. Creation of expert systems and D. AI systems were able to handle uncertainty are the results of incorporating domain knowledge. Your reasoning reflects a good understanding of AI advancement. Just note that the focus on AI in gaming also increased, so C could be a valid answer too. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "You are correct that incorporating domain knowledge led to the creation of expert systems (A). However, option D is not accurate, as it was the development of techniques like probabilistic reasoning that allowed AI systems to handle uncertainty. Hence, the right combination would have been A and C. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "While A (Creation of expert systems) is correct, D is not accurate. Incorporating domain knowledge did help create expert systems, but they still couldn't handle uncertainty. AI research began focusing on other approaches like neural networks, probability, and machine learning to address this limitation."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A is the only correct option. B is not a direct result of domain knowledge and D is the opposite of what was true for systems at that time. Although there was some focus in AI in gaming at the time (i.e. Wumpus), focus did not primarily nor drastically shift.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["A","A","A"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q12": {
+        "question": "What are examples of expert systems developed in the Knowledge-Based AI era?  A. Dendral B. Mycin C. Deep Blue D. ELIZA",
+        "stage1": {
+            "answer" : "dendral was used for chemistry and mycin in medicine",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! Dendral was used for chemistry and Mycin in medicine. However, you missed mentioning the other examples - Deep Blue (a chess-playing system) and ELIZA (an early natural language processing system). Overall, a good understanding of Dendral and Mycin, just remember to consider all options provided.",
+            "gptPartialKBReplyPostEdits": "That's correct! Dendral (A) was used for chemistry and Mycin (B) in medicine. However, you didn't mention Deep Blue (C), which was a chess-playing AI, and ELIZA (D), a natural language processing AI. Both are examples of expert systems developed in the Knowledge-Based AI era.",
+            "gptFullKBReplyPostEdits": "Correct! Dendral was used for chemistry and Mycin for medicine. These are great examples of expert systems developed in the Knowledge-Based AI era. However, your answer didn't mention Deep Blue (chess) and ELIZA (natural language processing), which are also examples of expert systems from that time.",
+            "domainExpertAReplyPostEdits" : "Correct, these examples were very good expert systems for very specific problems.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Correct, these were very good expert systems on very specific problems. ",
+            "domainExpertBReplyPreEdits" : "That’s correct! Bonus points for knowing the domains as well. a) Dendral was used for inferring molecular structure and b) MYCIN was used for medical diagnoses. Both made use of rules obtained from domain experts, hence their name expert systems. Deep Blue can be called an expert system but it came later in the 90s after the knowledge-based era. ELIZA, an early NLP program, came before and is often not mentioned alongside the other examples. ",
+            "gptNoKBReplyPreEdits" : "That's correct! Dendral was used for chemistry and Mycin in medicine. However, you missed mentioning the other examples - Deep Blue (a chess-playing system) and ELIZA (an early natural language processing system). Overall, a good understanding of Dendral and Mycin, just remember to consider all options provided.",
+            "gptPartialKBReplyPreEdits": "That's correct! Dendral (A) was used for chemistry and Mycin (B) in medicine. However, you didn't mention Deep Blue (C), which was a chess-playing AI, and ELIZA (D), a natural language processing AI. Both are examples of expert systems developed in the Knowledge-Based AI era.",
+            "gptFullKBReplyPreEdits" : "Correct! Dendral was used for chemistry and Mycin for medicine. These are great examples of expert systems developed in the Knowledge-Based AI era. However, your answer didn't mention Deep Blue (chess) and ELIZA (natural language processing), which are also examples of expert systems from that time."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "Dendral (A) and Mycin (B) are both expert systems of the era. Deep Blue was made much later and ELIZA was created before the Knowledge-Based AI era.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q13": {
+        "question": "Which of the following factors contributed to the development of a more scientific and unified approach to AI during the \"AI Becomes Scientific\" era? a) The failure of expert systems b) The success of connectionist approaches c) The incorporation of probability d) The development of advanced hardware",
+        "stage1": {
+            "answer" : "a,b. the ai winter spurred the more united and scientific approach",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct that the AI winter and the failure of expert systems contributed to a more scientific approach. However, incorporating probabilities and advanced hardware development also played crucial roles, so the complete answer would be a, b, c, and d.",
+            "gptPartialKBReplyPostEdits": "That's correct, the AI winter and the limitations of expert systems motivated a more unified and scientific approach. However, the additional factors c) incorporating probability and d) advanced hardware development also played a significant role in shaping the \"AI Becomes Scientific\" era.",
+            "gptFullKBReplyPostEdits": "You are correct that the failure of expert systems (a) and the success of connectionist approaches (b) contributed to the development of a more scientific and unified approach to AI. However, the incorporation of probability (c) and the development of advanced hardware (d) were also significant factors in this era. It is important to consider all these components to better understand the AI Becomes Scientific Era.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "You’ve correctly identified a) and b) as factors contributing to artificial intelligence becoming more scientific from the 1990s and onward. However, c) the incorporation of probability instead of boolean logic played an important role in helping address the uncertainty in the real world and more recently, d) the development of advanced hardware after the 2010s (e.g. GPUs and TPUs) accelerated research and applications. Therefore, the correct answer is all of the options: a), b), c), and d).",
+            "domainExpertAReplyPreEdits" : "All of them! You are right about a) and b) but recall that probability helped deal with uncertainty and advanced hardware made using neural networks possible.",
+            "domainExpertBReplyPreEdits" : "You’ve correctly identified a) and b) as factors contributing to artificial intelligence becoming more scientific from 1990s and onward. However, c) the incorporation of probability instead of boolean logic played an important role in helping address the uncertainty in the real world and more recently d) the development of advanced hardware after 2010s (e.g., GPUs and TPUs) accelerated research and applications. Therefore, the correct answer is all of the options: a), b), c), and d).",
+            "gptNoKBReplyPreEdits" : "You're correct that the AI winter and the failure of expert systems contributed to a more scientific approach. However, incorporating probabilities and advanced hardware development also played crucial roles, so the complete answer would be a, b, c, and d. Keep up the enthusiasm for learning about AI!",
+            "gptPartialKBReplyPreEdits": "That's correct, the AI winter and the limitations of expert systems motivated a more unified and scientific approach. However, the additional factors c) incorporating probability and d) advanced hardware development also played a significant role in shaping the \"AI Becomes Scientific\" era. Keep exploring and making connections!",
+            "gptFullKBReplyPreEdits" : "You are correct that the failure of expert systems (a) and the success of connectionist approaches (b) contributed to the development of a more scientific and unified approach to AI. However, the incorporation of probability (c) and the development of advanced hardware (d) were also significant factors in this era. It is important to consider all these components to better understand the AI Becomes Scientific Era."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "All of the above contributed to the development of a more scientific and unified approach.",
+
+            "noKBvsDomainStudentA" : ["A","C","C"],
+            "partialKBvsDomainStudentA": ["A","C","C"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["C","C","C"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q14": {
+        "question": "What were some limitations of expert systems? A. Hard to build and maintain B. Could not handle uncertainty about the world C. Unable to learn from experience D. Expert systems were too easy to create",
+        "stage1": {
+            "answer" : "the answer is (a) hard and maintain. the answer is not (b) because uncertainty exists in knowledge-based ai.",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct that expert systems were hard to build and maintain (A). However, they also had difficulties handling uncertainty (B) and learning from experience (C). All three options (A, B, and C) are accurate limitations of expert systems.",
+            "gptPartialKBReplyPostEdits": "You're correct that expert systems were hard to build and maintain (A). However, expert systems did have limitations handling uncertainty (B) and learning from experience (C). You have a good grasp but need to recognize these additional challenges expert systems faced.",
+            "gptFullKBReplyPostEdits": "Your answer is partially correct. A. \"Hard to build and maintain\" is accurate, but B. \"Could not handle uncertainty about the world\" is also correct. Expert systems faced limitations in dealing with uncertainty and learning from experience.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "The correct answer is a), b), and c) – but you were close, as b) and c) is the justification behind a). Expert systems were hard to build and maintain, as they could not handle uncertainty about the world and were unable to learn from experience and data due to the often rigid rule-based procedures and domain-specific knowledge used for reasoning.",
+            "domainExpertAReplyPreEdits" : "Expert systems are based on logical agents and hence cannot handle uncertainty. They are not able to learn from experience like machine learning models. Hence, A, B, C. ",
+            "domainExpertBReplyPreEdits" : "The correct answer is a), b), and c) – but you were close, as b) and c) is the justification behind a). Expert systems were hard to build and maintain, as they could not handle uncertainty about the world and unable to learn from experience or data due to the often rigid rule-based procedures and domain-specific knowledge used for reasoning.",
+            "gptNoKBReplyPreEdits" : "You're correct that expert systems were hard to build and maintain (A). However, they also had difficulties handling uncertainty (B) and learning from experience (C). All three options (A, B, and C) are accurate limitations of expert systems.",
+            "gptPartialKBReplyPreEdits": "You're correct that expert systems were hard to build and maintain (A). However, expert systems did have limitations handling uncertainty (B) and learning from experience (C). You have a good grasp but need to recognize these additional challenges expert systems faced.",
+            "gptFullKBReplyPreEdits" : "Your answer is partially correct. A. \"Hard to build and maintain\" is accurate, but B. \"Could not handle uncertainty about the world\" is also correct. Expert systems faced limitations in dealing with uncertainty and learning from experience. Keep up the good work, and let's continue exploring AI!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and C were all resulting issues of expert systems. D is not relevant or true.",
+
+            "noKBvsDomainStudentA" : ["C","C","C"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["B","B","B"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["A","A","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q15": {
+        "question": "Which of the following played a significant role in the return of neural networks in 1986? a) The backpropagation algorithm b) Convolutional Neural Networks c) IBM Watson's success in Jeopardy! d) Benchmark datasets and data repositories",
+        "stage1": {
+            "answer" : "c, d. better data and public interest helped neural networks return in 1986.",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Your answer was partially correct. While public interest and data repositories played a role (d), the key factor in 1986 was the development of the backpropagation algorithm (a). IBM Watson's success (c) occurred much later and is not directly related to neural networks' resurgence in 1986.",
+            "gptPartialKBReplyPostEdits": "While it's true that better data and public interest played a role in AI's development, the correct answers are a) The backpropagation algorithm and d) Benchmark datasets and data repositories. Backpropagation was crucial for training neural networks, and benchmark datasets helped measure progress. IBM Watson's Jeopardy! success happened much later in 2011.",
+            "gptFullKBReplyPostEdits": "Your answer is partially correct, but the main factors for the return of neural networks in 1986 were options a) the backpropagation algorithm and d) benchmark datasets and data repositories. IBM Watson's success came later and is not related to the 1986 neural network resurgence.",
+            "domainExpertAReplyPostEdits" : "I would say all of the above. A) because it helped train neural networks, B) because CNNs were used for digit recognition in the 1990s and were successful and became popular, C) because IBM Watson reconciled the public opinion with AI, and D) as benchmark datasets and data repositories provided data for training.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : " I would say all of the above. A) because it helped trained neural networks, B) CNN were used for digit recognition in the 90’s and were successful and became popular, C) IBM Watson reconciled the public opinion with AI, and D) provided data for training.",
+            "domainExpertBReplyPreEdits" : "You’ve correctly identified d) as opposed to toy examples as a key factor in the return of neural networks. For example, MNIST dates back to early 1990s. However, a) also played an important role whereby using the connectionist approach, neural networks could learn from data. The correct answer is a) and d). CNNs and IBM Watson’s success in Jeopary came a few decades later, yet still within the AI Becomes Scientific era.",
+            "gptNoKBReplyPreEdits" : "Your answer was partially correct. While public interest and data repositories played a role (d), the key factor in 1986 was the development of the backpropagation algorithm (a). IBM Watson's success (c) occurred much later and is not directly related to neural networks' resurgence in 1986.",
+            "gptPartialKBReplyPreEdits": "While it's true that better data and public interest played a role in AI's development, the correct answers are a) The backpropagation algorithm and d) Benchmark datasets and data repositories. Backpropagation was crucial for training neural networks, and benchmark datasets helped measure progress. IBM Watson's Jeopardy! success happened much later in 2011.",
+            "gptFullKBReplyPreEdits" : "Your answer is partially correct, but the main factors for the return of neural networks in 1986 were options a) the backpropagation algorithm and d) benchmark datasets and data repositories. IBM Watson's success came later and is not related to the 1986 neural network resurgence."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "Backpropagation (A), CNNs (B), and big data (D) definitely contributed. C is arguable based on the type of influence one is arguing for. If the question is interpreted as indirect influence from public popularity, then yes; if it is interpreted as direct influence from IBM Watson, then no.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["A", "A", "A"],
+            "partialKBvsDomainStudentB": ["A","A","A"], 
+            "fullKBvsDomainStudentB": ["B","B","B"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q16": {
+        "question": "What was a key advantage of incorporating probability into AI systems during the AI Becomes Scientific era? a) Efficient use of computation resources b) Ability to model uncertainty c) Improved speech recognition capabilities d) Fast training on large datasets",
+        "stage1": {
+            "answer" : " the answer is (a) as now using uncertainty instead of hard coding logic into systems, we would be efficient in our use of computation resources. ",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Your answer is partially correct. Option (a) is indeed an advantage in terms of computational efficiency. However, you missed option (b), which is also crucial, as incorporating probability allows AI systems to handle and model uncertainty effectively.",
+            "gptPartialKBReplyPostEdits": "Your answer was partially correct. Incorporating probability into AI systems does lead to more efficient use of computational resources (a). However, it also helps in modeling uncertainty (b) and improving speech recognition capabilities (c). The option (d) is not necessarily a direct result of incorporating probability. ",
+            "gptFullKBReplyPostEdits": "While it's true that incorporating probability may lead to more efficient use of computational resources in certain cases, the main advantage is the ability to model uncertainty (b). Efficient use of resources (a) may not always be a direct consequence, and speech recognition (c) and fast training (d) are not directly related to probability incorporation.",
+            "domainExpertAReplyPostEdits" : "The big advantage is modeling uncertainty, so b).",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "The big advantage is modeling uncertainty, so b)",
+            "domainExpertBReplyPreEdits" : "You’re correct that incorporating probability instead of boolean logic helped us better model and address uncertainty present in the real-world examples, that’s why the correct answer is b). a) efficient use of computational resources could instead be tied to parallelization and the advancement of hardware (e.g., GPUs).",
+            "gptNoKBReplyPreEdits" : "Your answer is partially correct. Option (a) is indeed an advantage in terms of computational efficiency. However, you missed option (b), which is also crucial, as incorporating probability allows AI systems to handle and model uncertainty effectively. Keep up the good work and continue exploring other benefits of probabilistic methods in AI!",
+            "gptPartialKBReplyPreEdits": "Your answer was partially correct. Incorporating probability into AI systems does lead to more efficient use of computational resources (a). However, it also helps in modeling uncertainty (b) and improving speech recognition capabilities (c). The option (d) is not necessarily a direct result of incorporating probability. Keep learning!",
+            "gptFullKBReplyPreEdits" : "While it's true that incorporating probability may lead to more efficient use of computational resources in certain cases, the main advantage is the ability to model uncertainty (b). Efficient use of resources (a) may not always be a direct consequence, and speech recognition (c) and fast training (d) are not directly related to probability incorporation."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "Modeling uncertainty became possible (B). Fast training on large data and efficient use of computational resources (A and D) are not relevant to the use of probability (unless reasoning is given on prior attempts for modeling uncertainty being too computationally expensive). C is arguable as an indirect effect depending on the question/answer's interpretation.",
+
+            "noKBvsDomainStudentA" : ["B","B","B"],
+            "partialKBvsDomainStudentA": ["A","A","A"],
+            "fullKBvsDomainStudentA": ["A","A","A"],
+            
+            "noKBvsDomainStudentB" : ["A", "A", "A"],
+            "partialKBvsDomainStudentB": ["A","A","A"],
+            "fullKBvsDomainStudentB": ["A","A","A"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q17": { 
+    "question": "Deep learning made a significant impact in the AI Becomes Scientific era through the use of: a) Neural networks with many layers of neurons b) Powerful hardware like FPGAs, GPUs, and TPUs c) The success of expert systems d) Connectionist approaches ",
+        "stage1": {
+            "answer" : "a, b, d. deep learning involved neural networks as well as powerful hardware. it could not have been possible without connectionist approaches as well.",
+            "studentWhoAnswered": "A"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Absolutely correct! Deep learning indeed had significant impact due to neural networks with many layers (a), powerful hardware (b), and connectionist approaches (d). Expert systems (c) were influential in AI history but not directly connected to deep learning's impact.",
+            "gptPartialKBReplyPostEdits": "Great job! Your answer is accurate and well-articulated. You correctly identified the key components of deep learning's impact in the \"AI Becomes Scientific\" era: the advancements in neural networks, powerful hardware, and connectionist approaches.",
+            "gptFullKBReplyPostEdits": "You are correct! Deep learning indeed made a significant impact in the AI Becomes Scientific era through the use of neural networks with many layers of neurons (a), powerful hardware like FPGAs, GPUs, and TPUs (b), and connectionist approaches (d). ",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, well done on picking all of the correct options! The connectionist approach, in contrast to symbolic artificial intelligence, fueled much of the earlier work during the Gestation of AI, including the MP neuron and the Perceptron. Later, building on this trend, neural networks with many hidden layers achieved many successes in real-world problems, often by utilizing powerful hardware like GPUs during their training.",
+            "domainExpertAReplyPreEdits" : "Correct! Using many layers made using neural networks in complex domains like speech, images, and text possible. Powerful hardware made training the networks possible. Connectionist approaches helped simulate the functioning of the brain. ",
+            "domainExpertBReplyPreEdits" : "That’s correct, well done on picking all of the correct options! The connectionist approach, in contrast to symbolic artificial intelligence, fueled much of the earlier work during the Gestation of AI, including the MP neuron and the Perceptron. Later, building on this trend, neural networks with many hidden layers achieved many successes in real-world problems, often by utilizing powerful hardware like GPUs during their training.",
+            "gptNoKBReplyPreEdits" : "Absolutely correct! Deep learning indeed had significant impact due to neural networks with many layers (a), powerful hardware (b), and connectionist approaches (d). Expert systems (c) were influential in AI history but not directly connected to deep learning's impact. Great job identifying the key elements!",
+            "gptPartialKBReplyPreEdits": "Great job! Your answer is accurate and well-articulated. You correctly identified the key components of deep learning's impact in the \"AI Becomes Scientific\" era: the advancements in neural networks, powerful hardware, and connectionist approaches. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "You are correct! Deep learning indeed made a significant impact in the AI Becomes Scientific era through the use of neural networks with many layers of neurons (a), powerful hardware like FPGAs, GPUs, and TPUs (b), and connectionist approaches (d). Great job on identifying the accurate components!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and D all relate to the success of deep learning with neural networks, the hardware running them, and the theories behind them. C is not correct and not relevant.",
+
+            "noKBvsDomainStudentA" : ["C","C","B"],
+            "partialKBvsDomainStudentA": ["C","C","B"],
+            "fullKBvsDomainStudentA": ["B","B","B"],
+            
+            "noKBvsDomainStudentB" : ["C","C","C"],
+            "partialKBvsDomainStudentB": ["C","A","B"],
+            "fullKBvsDomainStudentB": ["C","C","C"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q18": {
+        "question": "The AI Spring, which marked a turning point in the AI field, was driven by several key factors, including: a) Advanced machine learning algorithms b) The use of big data c) Convolutional Neural Networks and their successful implementation d) The failure of expert systems ",
+        "stage1": {
+            "answer" : "the answers are b and and c. big data is useful for training and convolutional neural nets were up and coming.",
+            "studentWhoAnswered": "B"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're mostly correct! Big data played a significant role, and convolutional neural networks had a huge impact. However, the AI Spring was also influenced by improved machine learning algorithms (a). Your answer is great, but including this detail would provide a more comprehensive understanding of the AI Spring.",
+            "gptPartialKBReplyPostEdits": "Your answer is partially correct. Big data and convolutional neural networks played significant roles in the AI Spring. However, the other factors also contributed: advanced machine learning algorithms (a) and the limitations of earlier expert systems (d) led to a shift in AI research focus. So, the complete answer includes all options: a, b, c, and d.",
+            "gptFullKBReplyPostEdits": "You're partially correct. Big data (b) and Convolutional Neural Networks (c) are indeed important factors. However, advanced machine learning algorithms (a) also play a significant role in driving the AI Spring. The failure of expert systems (d) spurred the development of new approaches, making AI more successful and scientifically grounded. Thus, a more complete answer would include all four factors: a, b, c, and d.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Well done on picking b) and c), but a) is also right. The AI Spring is often attributed to 2000s, where we saw the emergence of new machine learning and neural network algorithms, the use of big data with the emergence of the World Wide Web, and CNNs and their successful implementation. The failure of expert systems came roughly a decade before, which lead to the AI Winter instead.",
+            "domainExpertAReplyPreEdits" : "I would say, all the above. You got b) and c). Advanced algorithms made training the models possible and the failure of expert systems was an incentive to develop a better AI.",
+            "domainExpertBReplyPreEdits" : "Well done on picking b) and c), but a) is also right. The correct answer is a), b), and c). The AI Spring is often attributed to 2000s, where we saw the emergence of new machine learning and neural network algorithms, the use of big data with the emergence of the World Wide Web, and CNNs and their successful implementation. The failure of expert systems came roughly a decade before, which lead to the AI Winter instead.",
+            "gptNoKBReplyPreEdits" : "You're mostly correct! Big data played a significant role, and convolutional neural networks had a huge impact. However, the AI Spring was also influenced by improved machine learning algorithms (a). Your answer is great, but including this detail would provide a more comprehensive understanding of the AI Spring.",
+            "gptPartialKBReplyPreEdits": "Your answer is partially correct. Big data and convolutional neural networks played significant roles in the AI Spring. However, the other factors also contributed: advanced machine learning algorithms (a) and the limitations of earlier expert systems (d) led to a shift in AI research focus. So, the complete answer includes all options: a, b, c, and d.",
+            "gptFullKBReplyPreEdits" : "You're partially correct. Big data (b) and Convolutional Neural Networks (c) are indeed important factors. However, advanced machine learning algorithms (a) also play a significant role in driving the AI Spring. The failure of expert systems (d) spurred the development of new approaches, making AI more successful and scientifically grounded. Thus, a more complete answer would include all four factors: a, b, c, and d."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and C are all mentioned in the video. D is conditionally dependent on the reply's point of view of it.",
+
+            "noKBvsDomainStudentA" : ["C","C","C"],
+            "partialKBvsDomainStudentA": ["B","B","B"],
+            "fullKBvsDomainStudentA": ["C","C","C"],
+            
+            "noKBvsDomainStudentB" : ["A","A","A"],
+            "partialKBvsDomainStudentB": ["B","B","B"],
+            "fullKBvsDomainStudentB": ["C","A","C"],
+
+            "noKBvsDomainStudentC" : [],
+            "partialKBvsDomainStudentC": [],
+            "fullKBvsDomainStudentC": [],
+            
+            "noKBvsDomainStudentD" : [],
+            "partialKBvsDomainStudentD": [],
+            "fullKBvsDomainStudentD": []
+            
+        }
+    },
+    "q19": {
+        "question": "What characteristics are shared by both biological and artificial neurons? a) They both have dendrites b) Both can aggregate and process input values c) They both have axons d) Both can transmit outputs depending on certain criteria",
+        "stage1": {
+            "answer" : "a, c: biological neurons have these properties and artificial neurons try to mimic them",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Correct, biological neurons do have dendrites and axons, which artificial neurons mimic. However, the answer missed the key features of both types of neurons: their ability to aggregate and process input values (b), and to transmit outputs depending on certain criteria (d). These characteristics are fundamental to how both biological and artificial neurons function.",
+            "gptPartialKBReplyPostEdits": "You are correct that biological neurons have dendrites and axons; however, artificial neurons share more similarities. Both biological and artificial neurons can aggregate and process input values (b) and transmit outputs depending on certain criteria (d). Artificial neurons are designed to mimic these essential functionalities, although they do so in a simplified computational manner.",
+            "gptFullKBReplyPostEdits": "Your answer is partially correct, as biological neurons indeed have dendrites and axons. However, both biological and artificial neurons also share the properties of aggregating and processing input values (b), and transmitting outputs depending on certain criteria (d). So the correct answer would be all options: a, b, c, and d.",
+            "domainExpertAReplyPostEdits" : "Indeed, a and c are correct but also b and d are correct.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Indeed, a and c are correct but also b, and d are correct.",
+            "domainExpertBReplyPreEdits" : "The correct answer is b) and d). Your intuition is correct in that artificial neurons try to mimic biological neurons, however the nature of this mimicking is not biological mapping, it is rather based on activity and behavior. Artificial neurons perform b) and d), just like their biological counterparts. Aligned with your intuition, certain subfields of neuroscience and artificial intelligence are indeed concerned with finer biological mapping between neural networks and brain circuitry.",
+            "gptNoKBReplyPreEdits" : "Correct, biological neurons do have dendrites and axons, which artificial neurons mimic. However, the answer missed the key features of both types of neurons: their ability to aggregate and process input values (b), and to transmit outputs depending on certain criteria (d). These characteristics are fundamental to how both biological and artificial neurons function.",
+            "gptPartialKBReplyPreEdits": "You are correct that biological neurons have dendrites and axons; however, artificial neurons share more similarities. Both biological and artificial neurons can aggregate and process input values (b) and transmit outputs depending on certain criteria (d). Artificial neurons are designed to mimic these essential functionalities, although they do so in a simplified computational manner.",
+            "gptFullKBReplyPreEdits" : "Your answer is partially correct, as biological neurons indeed have dendrites and axons. However, both biological and artificial neurons also share the properties of aggregating and processing input values (b), and transmitting outputs depending on certain criteria (d). So the correct answer would be all options: a, b, c, and d."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A and C are incorrect (artificial cells don't have biological parts). B and D are correct as they mimic functionality.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["A","A","A"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["A","A","A"],
+            
+            "noKBvsDomainStudentD" : ["A","A","A"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["C","A","A"]
+            
+        }
+    },
+    "q20": {
+        "question": "What can an artificial neuron learn and represent? a) Propositional logic expressions b) Numerical calculations c) Complex decision-making processes d) Statements with connectives such as “and”, “or” ",
+        "stage1": {
+            "answer" : "a, b, c, d - neural networks can probabilistically handle lots of real world uncertainties such as complex decision making, but they can also do more concrete tasks like numerical and logical calculations",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're absolutely right! Artificial neurons can indeed learn and represent propositional logic expressions, numerical calculations, complex decision-making processes, and statements with connectives.",
+            "gptPartialKBReplyPostEdits": "Great answer! You've correctly identified that artificial neurons can learn and represent all of the mentioned tasks, such as propositional logic expressions, numerical calculations, complex decision-making processes, and statements with connectives.",
+            "gptFullKBReplyPostEdits": "You're correct about artificial neurons being capable of handling complex decision-making and real-world uncertainties. However, the original question focused on individual artificial neurons, which can primarily learn propositional logic expressions (a) and involve connectives such as \"and\" and \"or\" (d). The more complex tasks you mentioned are better attributed to neural networks as a whole, rather than individual neurons.",
+            "domainExpertAReplyPostEdits" : "You are correct that modern neural networks, especially deep neural networks, can do a lot; however, the question is asking about an artificial neuron which has a limited ability. It can do a) and some connectives described in d). For instance, one single artificial neuron can’t do the XOR connective. Note that the McCulloh and Pitts neuron was not sophisticated and dealt only with simple Boolean functions.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "You are correct that nowadays neural networks, especially deep ones can do a lot but the question is asking about an artificial neuron which has a limited ability. It can do a) and some connectives in d). For instance, one single artificial neuron can’t do the XOR connective. Note that the McCulloh and Pitts neurons was not sophisticated and dealt with simple Boolean functions.",
+            "domainExpertBReplyPreEdits" : "Your answer is correct, however I’d like to emphasize that the question asks about a single neuron. How would you change your explanation? [Pause, and give time to answer]. That’s right, as part of a larger network of artificial neurons, a single neuron can learn to represent a), b), c), and d). However, especially for a) and c), you’d likely need a neuron as part of a larger and more complex neural network.",
+            "gptNoKBReplyPreEdits" : "You're absolutely right! Artificial neurons can indeed learn and represent propositional logic expressions, numerical calculations, complex decision-making processes, and statements with connectives. Your answer shows a great understanding of the capabilities of AI and neural networks, and you've covered the main points. Keep up the excellent work!",
+            "gptPartialKBReplyPreEdits": "Great answer! You've correctly identified that artificial neurons can learn and represent all of the mentioned tasks, such as propositional logic expressions, numerical calculations, complex decision-making processes, and statements with connectives. Your understanding of their versatility and applicability to various tasks showcases your grasp of the subject. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "You're correct about artificial neurons being capable of handling complex decision-making and real-world uncertainties. However, the original question focused on individual artificial neurons, which can primarily learn propositional logic expressions (a) and involve connectives such as \"and\" and \"or\" (d). The more complex tasks you mentioned are better attributed to neural networks as a whole, rather than individual neurons."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A is correct as they can learn (some) logic expressions and connectives (not XOR). B and C are incorrect as basic neurons (without more attached) cannot perform numerical mathematics aside from signal aggregation.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","B","B"],
+            "partialKBvsDomainStudentC": ["B","B","B"],
+            "fullKBvsDomainStudentC": ["C","A","B"],
+            
+            "noKBvsDomainStudentD" : ["B","B","B"],
+            "partialKBvsDomainStudentD": ["B","B","B"],
+            "fullKBvsDomainStudentD": ["C","A","A"]
+            
+        }
+    },
+    "q21": {
+        "question": "Which of the following are demonstrations of early AI work by McCulloch and Pitts in the 1940s? a) Mimicking the activity of a biological neuron with an artificial neuron. b) Creating the first artificial intelligence language. c) Proposing a test to measure whether a machine can exhibit intelligence. d) Demonstrating how an artificial neuron can learn propositional logic expressions.",
+        "stage1": {
+            "answer" : "a, d: mcculloch and pitts modeled the early ann after the biological neuron and such units could learn simple boolean expressions",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're absolutely right! Both a and d are correct. McCulloch and Pitts indeed modeled early artificial neurons after biological neurons, and they demonstrated that these artificial neurons could learn simple propositional logic expressions.",
+            "gptPartialKBReplyPostEdits": "That's correct! McCulloch and Pitts modeled artificial neurons after biological ones and demonstrated their ability to learn simple Boolean expressions.",
+            "gptFullKBReplyPostEdits": "That's correct! Your answer a) and d) accurately represent the early AI work by McCulloch and Pitts. They showed how artificial neurons could mimic biological neurons and demonstrated their capability to learn propositional logic expressions.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, great job! b) happened later with early programming languages, and c) refers most likely to the Turing Test, which was proposed in 1950 by Alan Turing. I’d also likely frame it as representation or simulation as opposed to learning – early work from McCulloch and Pitts did not discuss learning the way we refer to learning today – which is more based on supervised machine learning (i.e. learning from data).",
+            "domainExpertAReplyPreEdits" : "You are correct. While the perceptron is very popular, early AI work by McCulloch and Pitts in the 1940s was the seminal work that invented the first neuron to mimic the activity of a biological neuron and learn boolean expressions.",
+            "domainExpertBReplyPreEdits" : "That’s correct, great job! b) happened later with early programming languages, and c) refers most likely to the Turing Test, which was proposed in 1950 by Alan Turing. I’d also likely frame it as representation or simulation as opposed to learning – early work from McCulloch and Pitts did not discuss learning the way we refer to learning today – which is more based on supervised machine learning (i.e., learning from data).",
+            "gptNoKBReplyPreEdits" : "You're absolutely right! Both a and d are correct. McCulloch and Pitts indeed modeled early artificial neurons after biological neurons, and they demonstrated that these artificial neurons could learn simple propositional logic expressions. Great job on understanding the origins of AI work!",
+            "gptPartialKBReplyPreEdits": "That's correct! McCulloch and Pitts modeled artificial neurons after biological ones and demonstrated their ability to learn simple Boolean expressions. Your answer was accurate and concise, showing a good understanding of their work in the \"Gestation of AI\" era. Keep up the great work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Your answer a) and d) accurately represent the early AI work by McCulloch and Pitts. They showed how artificial neurons could mimic biological neurons and demonstrated their capability to learn propositional logic expressions. Great job on grasping these concepts!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A and D are correct the artificial neuron was developed and shown to learn simple propositional logic expressions. B is incorrect as it is related top Lisp (John McCarthy) and C is incorrect as it is related to the Turing Test.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["C","B","B"],
+            "partialKBvsDomainStudentC": ["B","B","B"],
+            "fullKBvsDomainStudentC": ["C","B","B"],
+            
+            "noKBvsDomainStudentD" : ["C","C","B"],
+            "partialKBvsDomainStudentD": ["B","C","B"],
+            "fullKBvsDomainStudentD": ["C","C","B"]
+            
+        }
+    },
+    "q22": {
+        "question": "What does a neuron output if the sum of its inputs does not exceed the threshold value?  a) 0 b) 1 c) -1 d) The threshold value ",
+        "stage1": {
+            "answer" : "a - the mcculloch pitts artificial neuron only fires if it’s input sum exceeds the threshold value, otherwise it remains a zero",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! Your answer, 'a) 0', accurately demonstrates an understanding of the McCulloch-Pitts artificial neuron model. It only fires when the input sum exceeds the threshold value; otherwise, it remains at zero. ",
+            "gptPartialKBReplyPostEdits": "That's correct! The McCulloch-Pitts artificial neuron outputs a 0 if the sum of its inputs does not exceed the threshold value.",
+            "gptFullKBReplyPostEdits": "That's correct! Your understanding of the McCulloch-Pitts artificial neuron is accurate. The neuron outputs a 0 if the input sum does not exceed the threshold value.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Great job, that’s correct! In the context of a neuron with a threshold, assuming the McCulloch and Pitts model, both the inputs to the neuron and the response from the neuron are all binary (0 or 1). 1 means the neuron fires (on) and 0 means the neuron doesn’t fire (off).",
+            "domainExpertAReplyPreEdits" : "You are correct.",
+            "domainExpertBReplyPreEdits" : "Great job, that’s correct! In the context of a neuron with threshold, assuming the McCulloch and Pitts model, both the inputs to the neuron and the response from the neuron are all binary (0 or 1). 1 means the neuron fires (on) and 0 means the neuron doesn’t fire (off).",
+            "gptNoKBReplyPreEdits" : "That's correct! Your answer, 'a) 0', accurately demonstrates an understanding of the McCulloch-Pitts artificial neuron model. It only fires when the input sum exceeds the threshold value; otherwise, it remains at zero. Great job in applying this concept! Keep up the good work.",
+            "gptPartialKBReplyPreEdits": "That's correct! SHRDLU was an AI program developed by Terry Winograd that could understand and discuss subjects in English related to a world of small blocks and boxes. Your answer was accurate and demonstrated a clear understanding of the program and its language capabilities. Great job!",
+            "gptFullKBReplyPreEdits" : "That's correct! SHRDLU, developed by Terry Winograd at MIT, was an AI program capable of understanding and discussing subjects related to a world of small blocks and boxes in English, allowing for natural language interaction and reasoning. Great job on your answer!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A is the only correct answer as artificial neurons (for McCulloch & Pitts) output a zero for insufficient aggregate values.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["C","C","C"],
+            "partialKBvsDomainStudentC": ["B","B","B"],
+            "fullKBvsDomainStudentC": ["B","B","B"],
+            
+            "noKBvsDomainStudentD" : ["C","A","C"],
+            "partialKBvsDomainStudentD": ["C","C","B"],
+            "fullKBvsDomainStudentD": ["C","A","B"]
+            
+        }
+    },
+    "q23": {
+        "question": "What capabilities did Shakey the robot demonstrate? a) Natural language understanding b) Logical reasoning c) Early navigational techniques for planning d) Microworld problem solving",
+        "stage1": {
+            "answer" : "a, c: shakey can plan its actions and move through its environment",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You are correct that Shakey demonstrated early navigational techniques for planning (c) and was able to move through its environment. However, it's worth mentioning that Shakey also possessed logical reasoning (b) capabilities to help solve problems. Natural language understanding (a) was not a part of Shakey's skill set.",
+            "gptPartialKBReplyPostEdits": "That's correct, Shakey demonstrated early navigational techniques for planning and could move through its environment. Though it didn't possess natural language understanding, it could perform logical reasoning for problem-solving. So, the correct answer would be b) Logical reasoning and c) Early navigational techniques for planning.",
+            "gptFullKBReplyPostEdits": "That's correct! Shakey demonstrated natural language understanding (a) and early navigational techniques for planning (c). However, it's also important to note that Shakey utilized logical reasoning (b) to make decisions based on its sensory input.",
+            "domainExpertAReplyPostEdits" : "Correct but I would add b) as Shakey could perceive and reason about its surroundings using logical reasoning.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Correct but I would add b) as Shaley could perceive and reason about its surroundings using logical reasoning.",
+            "domainExpertBReplyPreEdits" : "Shakey could indeed plan its actions and move through the environment using logical reasoning and natural language understanding through a limited set of instructions. The commands it received were also similar to the commands in blocks world and microworlds, though this time the environment was real and not simulated. Therefore, the correct answer is all of the above: a), b), c), and d).",
+            "gptNoKBReplyPreEdits" : "You are correct that Shakey demonstrated early navigational techniques for planning (c) and was able to move through its environment. However, it's worth mentioning that Shakey also possessed logical reasoning (b) capabilities to help solve problems. Natural language understanding (a) was not a part of Shakey's skill set.",
+            "gptPartialKBReplyPreEdits": "That's correct, Shakey demonstrated early navigational techniques for planning and could move through its environment. Though it didn't possess natural language understanding, it could perform logical reasoning for problem-solving. So, the correct answer would be b) Logical reasoning and c) Early navigational techniques for planning. Keep up the good work!",
+            "gptFullKBReplyPreEdits" : "That's correct! Shakey demonstrated natural language understanding (a) and early navigational techniques for planning (c). However, it's also important to note that Shakey utilized logical reasoning (b) to make decisions based on its sensory input."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A, B, and C are correct as they are describing the capabilities Shakey exhibited. D is conditionally correct depending on the context of which it is being described. If it is described as a Minsky Microworld, it would be incorrect, but described as a general \"Microworld\" where blocks are interacted with, it would be correct.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","A","B"],
+            "partialKBvsDomainStudentC": ["B","A","B"],
+            "fullKBvsDomainStudentC": ["B","A","A"],
+            
+            "noKBvsDomainStudentD" : ["A","C","A"],
+            "partialKBvsDomainStudentD": ["C","A","A"],
+            "fullKBvsDomainStudentD": ["A","A","A"]
+            
+        }
+    },
+    "q24": {
+        "question": "Which famous AI developed by Terry Winograd at MIT could understand and discuss certain subjects in English? a) Lisp b) SHRDLU c) Adaline d) Deepmind's AlphaGo",
+        "stage1": {
+            "answer" : "b - shrdlu could understand natural language as it related to a world of small blocks and boxes",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct! SHRDLU is the AI that Terry Winograd developed, which could process and understand natural language within the context of a limited environment with blocks and boxes.",
+            "gptPartialKBReplyPostEdits": "That's correct! SHRDLU was an AI program developed by Terry Winograd that could understand and discuss subjects in English related to a world of small blocks and boxes.",
+            "gptFullKBReplyPostEdits": "That's correct! SHRDLU, developed by Terry Winograd at MIT, was an AI program capable of understanding and discussing subjects related to a world of small blocks and boxes in English, allowing for natural language interaction and reasoning.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, great job! SHRDLU could indeed understand and respond to a set of limited commands in a blocks world consisting of small blocks and boxes. It’s important to emphasize that this was one of the first natural language understanding programs ever written, and that it dealt with a limited set of language instructions.",
+            "domainExpertAReplyPreEdits" : "Correct. SHRDLU is a very famous early NLP program. The user could hold a simple conversation with  SHRDLU using simple commands to interact with a block world, a virtual space with different blocks of different shapes and colors.",
+            "domainExpertBReplyPreEdits" : "That’s correct, great job! SHRDLU could indeed understand and respond ta set of limited commands in a blocks world consisting of small blocks and boxes. It’s important to emphasize that this was one of the first natural language understanding programs ever written, and that it dealed with a limited set of language instructions.",
+            "gptNoKBReplyPreEdits" : "You're correct! SHRDLU is the AI that Terry Winograd developed, which could process and understand natural language within the context of a limited environment with blocks and boxes. Great job identifying the right answer! Keep up the good work.",
+            "gptPartialKBReplyPreEdits": "That's correct! SHRDLU was an AI program developed by Terry Winograd that could understand and discuss subjects in English related to a world of small blocks and boxes. Your answer was accurate and demonstrated a clear understanding of the program and its language capabilities. Great job!",
+            "gptFullKBReplyPreEdits" : "That's correct! SHRDLU, developed by Terry Winograd at MIT, was an AI program capable of understanding and discussing subjects related to a world of small blocks and boxes in English, allowing for natural language interaction and reasoning. Great job on your answer!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "B is the only correct answer meeting these conditions.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["A","C","B"],
+            "partialKBvsDomainStudentC": ["A","C","B"],
+            "fullKBvsDomainStudentC": ["A","C","A"],
+            
+            "noKBvsDomainStudentD" : ["B","C","B"],
+            "partialKBvsDomainStudentD": ["C","B","B"],
+            "fullKBvsDomainStudentD": ["C","C","B"]
+            
+        }
+    },
+    "q25": {
+        "question": "Which of the following achievements were related to artificial intelligence capabilities during the \"Early Enthusiasm and Expectations\" era? A. Invention of Lisp programming language by John McCarthy B. Development of Microworlds by Minsky's students C. Samuel's Checkers program using reinforcement learning D. SHRDLU natural language understanding program by Terry Winograd E. Shakey the robot's sensing, planning, and execution abilities",
+        "stage1": {
+            "answer" : "a, b, c, d: all these achievements were attained during the early enthusiasm and expectations era",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct! All of the achievements you selected (A, B, C, and D) were indeed accomplished during the Early Enthusiasm and Expectations era in AI. ",
+            "gptPartialKBReplyPostEdits": "Great job! You correctly identified events A, B, C, and D as achievements within the Early Enthusiasm and Expectations era. However, E (Shakey the robot) is also a key breakthrough during that era. Don't forget to include Shakey when discussing this important period in AI history.",
+            "gptFullKBReplyPostEdits": "You're absolutely correct! All the mentioned achievements (A, B, C, and D) were significant milestones during the Early Enthusiasm and Expectations era in artificial intelligence. These innovations have contributed to the development and the growth of AI as we know it today.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, all of the above are achievements attained during the Early Enthusiasm and Expectations era; therefore, the correct answers should have been a), b), c), d), and e). The last two options, d) and e), came near the end of this era, however, and might be excluded in some sources.",
+            "domainExpertAReplyPreEdits" : "Correct. All these achievements showed promise of the potential of AI. ",
+            "domainExpertBReplyPreEdits" : "That’s correct, all of the above are achievements attained during the early enthusiasm and expectations era, therefore the correct answer should’ve been: a), b), c), d), and e). Especially the last two options, d) and e) came near the end of this era, however, and might be excluded in some sources.",
+            "gptNoKBReplyPreEdits" : "That's correct! All of the achievements you selected (A, B, C, and D) were indeed accomplished during the Early Enthusiasm and Expectations era in AI. Great job on recalling these historical milestones, as they contributed significantly to the development and progress of artificial intelligence. Keep up the excellent work!",
+            "gptPartialKBReplyPreEdits": "Great job! You correctly identified events A, B, C, and D as achievements within the Early Enthusiasm and Expectations era. However, E (Shakey the robot) is also a key breakthrough during that era. Don't forget to include Shakey when discussing this important period in AI history.",
+            "gptFullKBReplyPreEdits" : "You're absolutely correct! All the mentioned achievements (A, B, C, and D) were significant milestones during the Early Enthusiasm and Expectations era in artificial intelligence. These innovations have contributed to the development and the growth of AI as we know it today. Keep up the great work!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "All of the above were included within the Early Enthusiasm and Expectations era.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","B","B"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["A","B","B"],
+            
+            "noKBvsDomainStudentD" : ["B","B","B"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["C","C","B"]
+            
+        }
+    },
+    "q26": {
+        "question": "What were Adaline and Perceptron inventions built upon during the early 60s? a) McCulloch and Pitts' neuron b) Lisp programming language c) Minsky's Microworlds d) Samuel's checkers",
+        "stage1": {
+            "answer" : "b - lisp programming language was used to develop ai in 1958 for 30 years",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Your answer is partially correct, as Lisp programming language played a significant role in AI development. However, the main inventions Adaline and Perceptron were built upon were a) McCulloch and Pitts' neuron. They were early models of artificial neurons which allowed for learning processes in AI.",
+            "gptPartialKBReplyPostEdits": "While it is true that Lisp programming language was widely used in AI development for many years, the answer is not directly related to Adaline and Perceptron. Adaline and Perceptron were both built upon McCulloch and Pitts' neuron concept, so the correct answer is a) McCulloch and Pitts' neuron.",
+            "gptFullKBReplyPostEdits": "Actually, the correct answer is a) McCulloch and Pitts' neuron. Adaline and Perceptron were neural networks built upon this neuron model. Lisp programming language, while important in AI history, wasn't the foundation for these inventions.",
+            "domainExpertAReplyPostEdits" : "I don’t think Adaline or the Perceptron used Lisp at all. However, they both got their inspiration from McCulloch and Pitts’ artificial neuron. For instance, the perceptron was presented by Rosenblatt as an example to sort punched card to go left and right.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "I don’t think Adaline and Perceptron used LISP at all. However they both got their inspiration from MCculloch and Pitts’ artificial neuron. For instance, the perceptron was presented by Rosemblatt on an examples to sort punched card to go left and right.",
+            "domainExpertBReplyPreEdits" : "Although you are correct in that Lisp was the most popular language in the development of artificial intelligence programs in the 30 years following its invention, the Adaline and Perceptron algorithms were first described mathematically as opposed to being programmed with Lisp. And these mathematical descriptions were largely built upon the McCulloch and Pitts’ neuron – therefore the correct answer is a).",
+            "gptNoKBReplyPreEdits" : "Your answer is partially correct, as Lisp programming language played a significant role in AI development. However, the main inventions Adaline and Perceptron were built upon were a) McCulloch and Pitts' neuron. They were early models of artificial neurons which allowed for learning processes in AI.",
+            "gptPartialKBReplyPreEdits": "While it is true that Lisp programming language was widely used in AI development for many years, the answer is not directly related to Adaline and Perceptron. Adaline and Perceptron were both built upon McCulloch and Pitts' neuron concept, so the correct answer is a) McCulloch and Pitts' neuron.",
+            "gptFullKBReplyPreEdits" : "Actually, the correct answer is a) McCulloch and Pitts' neuron. Adaline and Perceptron were neural networks built upon this neuron model. Lisp programming language, while important in AI history, wasn't the foundation for these inventions."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "Adaline was an early artificial neural network (single layer) and the perceptron was another version of an artificial neuron. The only reasonable answer would be A.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["C","A","A"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["A","A","A"],
+            
+            "noKBvsDomainStudentD" : ["A","A","A"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["A","A","A"]
+            
+        }
+    },
+    "q27": {
+        "question": "What are some key features of expert systems during the Knowledge-Based AI era?  A) They encoded domain knowledge to simulate human decision-making processes. B) They were designed to handle uncertainty about the world. C) They were able to learn from experience. D) Examples of these systems include Dendral, used in chemistry, and Mycin, used in medicine",
+        "stage1": {
+            "answer" : "a, b: these systems encoded human knowledge",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Your answer is partially correct. Expert systems did encode domain knowledge, but they also handled uncertainty (A and B). However, you missed mentioning that some systems could learn from experience (C) and specific examples like Dendral and Mycin (D). Including these points would provide a more complete understanding of expert systems.",
+            "gptPartialKBReplyPostEdits": "You're correct that expert systems encoded human knowledge. However, they primarily lacked the ability to handle uncertainty (B) and learn from experience (C). In addition, D) is also true as Dendral and Mycin were notable examples of expert systems in their respective fields. So, the complete answer would be A) and D).",
+            "gptFullKBReplyPostEdits": "You are partially correct. Answer A) is accurate: expert systems encoded domain knowledge to simulate human decision-making processes. However, answer B) is incorrect. Expert systems were limited as they could not handle uncertainty about the world or learn from experience. Consider reviewing options C) and D) for a more complete understanding. ",
+            "domainExpertAReplyPostEdits" : "Expert systems (to my knowledge) did not handle uncertainty and did not learn from experience. Therefore, the correct answers are A and D.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Expert system to my knowledge did not handle uncertainty not learn from experience. Correct answer is A and D.",
+            "domainExpertBReplyPreEdits" : "While it’s correct that expert systems encoded domain knowledge to simulate human decision-making processes, they could not handle uncertainty present abundantly in real-world problems and could not learn from experience. Dendral and MYCIN were two key examples of expert systems in the knowledge-based AI era. The correct answers are therefore a) and d).",
+            "gptNoKBReplyPreEdits" : "Your answer is partially correct. Expert systems did encode domain knowledge, but they also handled uncertainty (A and B). However, you missed mentioning that some systems could learn from experience (C) and specific examples like Dendral and Mycin (D). Including these points would provide a more complete understanding of expert systems.",
+            "gptPartialKBReplyPreEdits": "You're correct that expert systems encoded human knowledge. However, they primarily lacked the ability to handle uncertainty (B) and learn from experience (C). In addition, D) is also true as Dendral and Mycin were notable examples of expert systems in their respective fields. So, the complete answer would be A) and D).",
+            "gptFullKBReplyPreEdits" : "You are partially correct. Answer A) is accurate: expert systems encoded domain knowledge to simulate human decision-making processes. However, answer B) is incorrect. Expert systems were limited as they could not handle uncertainty about the world or learn from experience. Consider reviewing options C) and D) for a more complete understanding."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A and D are both correct, being from this era and are mentioned in the video. B and C explicitly were not possible and brought about early AI limitations.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","B","B"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["A","A","A"],
+            
+            "noKBvsDomainStudentD" : ["A","A","A"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["A","A","A"]
+            
+        }
+    },
+    "q28": {
+        "question": "What are some of the present-day technologies that Shakey is considered a precursor for? a) Self-driving cars b) Modern robots c) Mars rovers d) Smart home devices ",
+        "stage1": {
+            "answer" : "a, b, d - shakey used advanced ai to autonomously move and interact with the world just like a self driving car or the mars rover or a roomba",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct about a) self-driving cars and d) smart home devices. Shakey was an important precursor to modern robots, but more specifically in robotics research rather than the Mars rovers. The Mars rovers are an example of space exploration robots rather than general-purpose autonomous robots.",
+            "gptPartialKBReplyPostEdits": "You're mostly correct! Shakey is indeed a precursor to self-driving cars and modern robots, as it involved autonomous movement and interaction. However, it has a more indirect connection to smart home devices, as it laid the groundwork for AI in general, which can be used in smart home technology. Mars rovers, though not mentioned, also benefit from the technologies pioneered by Shakey.",
+            "gptFullKBReplyPostEdits": "Your answer is almost correct! Shakey is indeed a precursor for self-driving cars (a) and modern robots (b). However, it is also a precursor for Mars rovers (c), not smart home devices (d). Shakey's abilities in sensing, planning, and execution are similar to what is required for Mars rovers to navigate and perform tasks in their environments.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "Interesting that you mention the Mars rovers, I agree with you. The correct answers are all options: a), b), c), d). Indeed, Shakey was the first general purpose mobile robot agent to use logical reasoning to move and interact with the world – it paved the way for the autonomous robots we have today, including self-driving cars, modern robots, mars rovers, smart home devices, and much more!",
+            "domainExpertAReplyPreEdits" : "Correct, Shakey was the precursor of today’s robots and moving devices. I would include d) for instance, a robot cleaner. ",
+            "domainExpertBReplyPreEdits" : "Interesting that you mention Mars rovers, I’d agree with you. Shouldn’t the answer then be all options: a), b), c), d)? [Pause] That’d be the correct answer. Indeed, Shakey was the first general purpose mobile robot agent to use logical reasoning to move and interact with the world – it paved the way for the autonomous robots we have today, including self-driving cars, modern robots, mars rovers, smart home devices, and much more!",
+            "gptNoKBReplyPreEdits" : "You're correct about a) self-driving cars and d) smart home devices. Shakey was an important precursor to modern robots, but more specifically in robotics research rather than the Mars rovers. The Mars rovers are an example of space exploration robots rather than general-purpose autonomous robots. Great job, though; you demonstrated a solid understanding of the topic.",
+            "gptPartialKBReplyPreEdits": "You're mostly correct! Shakey is indeed a precursor to self-driving cars and modern robots, as it involved autonomous movement and interaction. However, it has a more indirect connection to smart home devices, as it laid the groundwork for AI in general, which can be used in smart home technology. Mars rovers, though not mentioned, also benefit from the technologies pioneered by Shakey. Good job!",
+            "gptFullKBReplyPreEdits" : "Your answer is almost correct! Shakey is indeed a precursor for self-driving cars (a) and modern robots (b). However, it is also a precursor for Mars rovers (c), not smart home devices (d). Shakey's abilities in sensing, planning, and execution are similar to what is required for Mars rovers to navigate and perform tasks in their environments. Keep up the good work!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A and B are fully correct. C is very likely to be correct (and is mentioned in the video under this context). D really depends on the context, as \"home devices\" is vague. If it is explained in the context of robotics devices like Roombas, there is a strong link; devices like Alexas and Nests would not have a strong connection.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","B","B"],
+            "partialKBvsDomainStudentC": ["C","C","C"],
+            "fullKBvsDomainStudentC": ["A","A","A"],
+            
+            "noKBvsDomainStudentD" : ["C","C","C"],
+            "partialKBvsDomainStudentD": ["A","C","C"],
+            "fullKBvsDomainStudentD": ["B","C","C"]
+            
+        }
+    },
+    "q29": {
+        "question": "Which of the following factors contributed to the decrease in interest in AI during the 1960s? A) Early AI systems were mostly developed on toy examples, leading to issues in scaling for larger and more complex problems. B) Perceptron was limited to linear problems, causing it to be deemed as too simple. C) Expert systems were hard to build and maintain. D) AI research received reduced funding due to the waning interest.",
+        "stage1": {
+            "answer" : "d: there was not much interest in ai after the failure of the perceptron to solve non-linear problems",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You are correct that the failure of the perceptron contributed to the reduced interest in AI. However, besides D, you overlooked factor B, which also played a role in the decrease of interest in AI during the 1960s. So, both B and D are correct answers in this case.",
+            "gptPartialKBReplyPostEdits": "Your answer is partially correct. Reduced funding due to waning interest (D) affected AI research in the 1960s. However, it's important to consider other factors as well. The limitations of Perceptron (B) and the difficulties in scaling early AI systems (A) also contributed to the decline in interest.",
+            "gptFullKBReplyPostEdits": "Your answer is partially correct. While reduced funding due to the waning interest did contribute to the slowdown in AI research, other factors like early AI systems being limited to toy examples and the perceptron's inability to solve non-linear problems also played a role in the decreased interest.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "You correctly identified a key limitation of the perceptron and linked it with received funding, which was a key output of decreasing interest in artificial intelligence in the 1960s. In fact, all of the answers above except c), which came later in the 1980s with the AI Winter, were among the factors that contributed to a decrease in interest in the 1960s. Therefore, the correct answers are a), b), and d).",
+            "domainExpertAReplyPreEdits" : "You are right but you can also add A, B, and C. The non scalability of expert systems, the limitation of the perceptron to linear problems and the reduction in funding reduced research and interest in AI in what was called the AI winter.",
+            "domainExpertBReplyPreEdits" : "You correctly identified a key limitation of the perceptron and linked it with received funding, which was a key output of decreasing interest in artificial intelligence in the 1960s. In fact, all of the answers above except c) which came later in 1980s with AI Winter, were among the factors that contributed to a decrease in interest in 1960s. Therefore, the correct answer is a), b), and d).",
+            "gptNoKBReplyPreEdits" : "You are correct that the failure of the perceptron contributed to the reduced interest in AI. However, besides D, you overlooked factor B, which also played a role in the decrease of interest in AI during the 1960s. So, both B and D are correct answers in this case. Keep up the good work!",
+            "gptPartialKBReplyPreEdits": "Your answer is partially correct. Reduced funding due to waning interest (D) affected AI research in the 1960s. However, it's important to consider other factors as well. The limitations of Perceptron (B) and the difficulties in scaling early AI systems (A) also contributed to the decline in interest.",
+            "gptFullKBReplyPreEdits" : "Your answer is partially correct. While reduced funding due to the waning interest did contribute to the slowdown in AI research, other factors like early AI systems being limited to toy examples and the perceptron's inability to solve non-linear problems also played a role in the decreased interest. Keep up the good work, and don't hesitate to ask for more clarification!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and D are correct and are mentioned in the video. However, C came in the 1980s in the Knowledge-Based AI era and not in the 1960s.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","B","B"],
+            "partialKBvsDomainStudentC": ["C","B","B"],
+            "fullKBvsDomainStudentC": ["C","B","B"],
+            
+            "noKBvsDomainStudentD" : ["B","B","B"],
+            "partialKBvsDomainStudentD": ["A","C","A"],
+            "fullKBvsDomainStudentD": ["A","A","A"]
+            
+        }
+    },
+    "q30": {
+        "question": "Which statement best describes the state of the AI industry in the 1980s? A. AI became an industry B. Expert systems were widely adopted in various fields  C. Funding for AI research increased D. AI research continued to slow down",
+        "stage1": {
+            "answer" : "d - ai systems could not operate on the real world because developing domain specific ai was slow and computers weren’t powerful enough to use modern ai techniques such as deep learning",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct about the limitations in AI development during the 1980s. However, other aspects of the industry did progress. Expert systems were adopted in various fields, and AI research received increased funding. So, the correct answer includes options A, B, and C.",
+            "gptPartialKBReplyPostEdits": "Your answer is partially correct. The development of domain-specific AI was indeed slow, and the lack of computational power limited AI techniques. However, you missed mentioning the widespread adoption of expert systems in various fields and the fact that AI became an industry during the 1980s. These factors gave rise to what is known as the \"AI Winter.\"",
+            "gptFullKBReplyPostEdits": "Your answer was partially correct. Expert systems faced limitations due to their inability to handle uncertainty and learn from experience. However, the 1980s saw AI becoming an industry with successful expert systems like Dendral and Mycin. The slowdown, or AI winter, happened later due to these limitations.",
+            "domainExpertAReplyPostEdits" : "D is correct indeed. However, despite being tailored to specific domains, AI became an industry and expert systems were adopted in several domains. I am not sure about the funding. I would add A, B and am uncertain about C.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "D is correct indeed. However, despite being tailored to specific domain, AI became an industry and expert systems were adopted in deveral domains. I am not sure about the funding. I would add A, B. I am uncertain about C.",
+            "domainExpertBReplyPreEdits" : "The correct answers are a) and b), as artificial intelligence became and industry and expert systems were widely adopted in many different fields and business sectors. This subsequently did lead to a brief increase in funding, but it also brought the AI Winter shortly after due to expert systems not performing well on real-world data, hence a decrease in funding and research slowing down again.",
+            "gptNoKBReplyPreEdits" : "You're correct about the limitations in AI development during the 1980s. However, other aspects of the industry did progress. Expert systems were adopted in various fields, and AI research received increased funding. So, the correct answer includes options A, B, and C.",
+            "gptPartialKBReplyPreEdits": "Your answer is partially correct. The development of domain-specific AI was indeed slow, and the lack of computational power limited AI techniques. However, you missed mentioning the widespread adoption of expert systems in various fields and the fact that AI became an industry during the 1980s. These factors gave rise to what is known as the \"AI Winter.\"",
+            "gptFullKBReplyPreEdits" : "Your answer was partially correct. Expert systems faced limitations due to their inability to handle uncertainty and learn from experience. However, the 1980s saw AI becoming an industry with successful expert systems like Dendral and Mycin. The slowdown, or AI winter, happened later due to these limitations."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "A and B are correct and are mentioned in the video. D is likely to be true, as the AI winter approached and less new inventions were created after the small hope of Knowledge-Based AI. ",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","C","B"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["A","A","C"],
+            
+            "noKBvsDomainStudentD" : ["B","C","B"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["B","B","B"]
+            
+        }
+    },
+    "q31": {
+        "question": "Which of the following limitations caused expert systems to impact AI research negatively during the Knowledge-Based AI era? A) Expert systems were unable to scale to large and complex problems. B) They had trouble handling uncertainty about the world. C) They were unable to learn from experience. D) The development of expert systems required significant funding and resources ",
+        "stage1": {
+            "answer" : "a,b,c,d - all of these factors contributed to poor ai development in the ai winter",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Correct! All of these factors (A, B, C, D) indeed contributed to the limitations of expert systems during the Knowledge-Based AI era, leading to the AI winter. ",
+            "gptPartialKBReplyPostEdits": "That's correct, all these factors (A, B, C, and D) played a role in the limitations of expert systems during the Knowledge-Based AI era. ",
+            "gptFullKBReplyPostEdits": "Correct! All factors (A, B, C, and D) contributed to the limitations of expert systems during the Knowledge-Based AI era. However, option A should refer to early AI systems rather than expert systems. Expert systems were indeed hard to build and maintain, limited in handling uncertainty, and had difficulty learning from experience.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "That’s correct, great job! All options are correct: a), b), c), and d). Expert systems were hard to build and maintain, as they could not handle uncertainty about the world. They also were unable to learn from experience or data as they often had rigid rule-based procedures and domain-specific knowledge used for reasoning. Their development also required significant funding and resources, for example, rules of Mycin were deducted from interviews with medical experts.",
+            "domainExpertAReplyPreEdits" : "Correct! All of these limitations led to the development of more powerful AI that can scale and handle uncertainty.",
+            "domainExpertBReplyPreEdits" : "That’s correct, great job! All options are correct: a), b), c), and d). Expert systems were hard to build and maintain, as they could not handle uncertainty about the world and unable to learn from experience or data the often rigid rule-based procedures and domain-specific knowledge used for reasoning. Their development also required significant funding and resources, for example, rules of MYCIN were deducted from interviews with medical experts.",
+            "gptNoKBReplyPreEdits" : "Correct! All of these factors (A, B, C, D) indeed contributed to the limitations of expert systems during the Knowledge-Based AI era, leading to the AI winter. Your answer is well-rounded and shows an understanding of the issues faced by AI research during that time. Good job!",
+            "gptPartialKBReplyPreEdits": "That's correct, all these factors (A, B, C, and D) played a role in the limitations of expert systems during the Knowledge-Based AI era. Your answer demonstrates a good understanding of the challenges faced in AI research during that time. Well done!",
+            "gptFullKBReplyPreEdits" : "Correct! All factors (A, B, C, and D) contributed to the limitations of expert systems during the Knowledge-Based AI era. However, option A should refer to early AI systems rather than expert systems. Expert systems were indeed hard to build and maintain, limited in handling uncertainty, and had difficulty learning from experience."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "All of the above are correct and were mentioned in the video.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["B","C","B"],
+            "partialKBvsDomainStudentC": ["B","C","B"],
+            "fullKBvsDomainStudentC": ["A","C","C"],
+            
+            "noKBvsDomainStudentD" : ["B","B","B"],
+            "partialKBvsDomainStudentD": ["B","B","B"],
+            "fullKBvsDomainStudentD": ["B","B","B"]
+            
+        }
+    },
+    "q32": {
+        "question": "In the context of machine learning, what was an important factor facilitating the development of algorithm design and testing? a) IBM Watson b) The success of expert systems c) The availability of benchmark datasets and data repositories d) Deep learning",
+        "stage1": {
+            "answer" : "c: big data led to the development of machine learning models",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "That's correct, the availability of big data and benchmark datasets played a key role in the development of machine learning models. While the other options are relevant to AI, they don't directly impact the development of algorithm design and testing as much as the availability of data does.",
+            "gptPartialKBReplyPostEdits": "Correct, the availability of benchmark datasets and data repositories (big data) played a significant role in the development of machine learning models by providing resources to test and refine algorithms. Keep in mind, other factors like neural networks, probability, and deep learning also contributed to the advancement of AI.",
+            "gptFullKBReplyPostEdits": "You are correct in highlighting the role of big data in the development of machine learning models. However, the specific question was related to algorithm design and testing, which was facilitated by the availability of benchmark datasets and data repositories (option c). Both big data and these benchmark datasets have been crucial for the advancement of AI.",
+            "domainExpertAReplyPostEdits" : "Definitely, the availability of large datasets and benchmarks allowed training neural network models. That was an important factor.",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Definitely, the availability of large datasets and benchmarks allowed training NN models. That was an important factor.",
+            "domainExpertBReplyPreEdits" : "That’s correct, well done! However, let's differentiate between benchmark data and big data. Benchmark data, including repositories like MNIST and ImageNet in computer vision, came into fruition much before the availability of what we call big data, which is often attributed to the emergence of the World Wide Web. Big data refers to the large collection of data we now have at our disposal, including text, images, videos, social media data, and so on!",
+            "gptNoKBReplyPreEdits" : "That's correct, the availability of big data and benchmark datasets played a key role in the development of machine learning models. While the other options are relevant to AI, they don't directly impact the development of algorithm design and testing as much as the availability of data does. Good job on recognizing that!",
+            "gptPartialKBReplyPreEdits": "Correct, the availability of benchmark datasets and data repositories (big data) played a significant role in the development of machine learning models by providing resources to test and refine algorithms. Well done! Keep in mind, other factors like neural networks, probability, and deep learning also contributed to the advancement of AI.",
+            "gptFullKBReplyPreEdits" : "You are correct in highlighting the role of big data in the development of machine learning models. However, the specific question was related to algorithm design and testing, which was facilitated by the availability of benchmark datasets and data repositories (option c). Both big data and these benchmark datasets have been crucial for the advancement of AI."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "C is the only option relating to facilitating algorithm design and testing. A, B, and D didn't help facilitate algorithm design and testing but were rather products of design.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["A","A","A"],
+            "partialKBvsDomainStudentC": ["A","A","A"],
+            "fullKBvsDomainStudentC": ["C","A","C"],
+            
+            "noKBvsDomainStudentD" : ["A","A","A"],
+            "partialKBvsDomainStudentD": ["A","A","A"],
+            "fullKBvsDomainStudentD": ["B","B","B"]
+            
+        }
+    },
+    "q33": {
+        "question": "IBM Watson's participation in the TV quiz show Jeopardy demonstrated several advanced AI capabilities, which include: a) Speech recognition b) Use of probability in decision-making c) Information extraction d) Building answers and converting them from text into speech ",
+        "stage1": {
+            "answer" : "a, d - watson was able to win jeopardy by understanding questions and answering them just in the same fashion as a human participant",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You are correct that Watson demonstrated impressive capabilities like speech recognition (a) and text-to-speech conversion (d). However, it also used probability in decision-making (b) and information extraction (c) to determine and refine the most suitable answers. Including these aspects would provide a complete understanding of Watson's AI capabilities.",
+            "gptPartialKBReplyPostEdits": "Your answer is partially correct. Watson indeed demonstrated speech recognition (a) and building answers with text-to-speech (d). However, it also utilized probability in decision-making (b) and information extraction (c) to find the best answers. So, all four options apply to Watson's capabilities in the Jeopardy game.",
+            "gptFullKBReplyPostEdits": "You are correct that Watson showcased speech recognition, and building answers before converting them into speech. However, it also utilized probability in decision-making and information extraction, making all options (a, b, c, and d) accurate. Watson used probability to determine the most likely correct answer based on available information.",
+            "domainExpertAReplyPostEdits" : "Definitely a) and d) but Watson might have also used probability in deciding the best action/response to take. It also used information extraction from data on the web! So add b) and c). ",
+            "domainExpertBReplyPostEdits" : "",
+            "domainExpertAReplyPreEdits" : "Definitely a) and d) but Watson might have also used probability in deciding the best action/response to take. It also used information extraction from data on the web! So add b) and c).",
+            "domainExpertBReplyPreEdits" : "Almost there! All of the options were in fact correct: a), b), c), and d). IBM Watson showed advanced capabilities such as speech recognition, search, information extraction, and natural language processing. It was one of the most glorified successes of artificial intelligence in the early 2010s.",
+            "gptNoKBReplyPreEdits" : "You are correct that Watson demonstrated impressive capabilities like speech recognition (a) and text-to-speech conversion (d). However, it also used probability in decision-making (b) and information extraction (c) to determine and refine the most suitable answers. Including these aspects would provide a complete understanding of Watson's AI capabilities.",
+            "gptPartialKBReplyPreEdits": "Your answer is partially correct. Watson indeed demonstrated speech recognition (a) and building answers with text-to-speech (d). However, it also utilized probability in decision-making (b) and information extraction (c) to find the best answers. So, all four options apply to Watson's capabilities in the Jeopardy game.",
+            "gptFullKBReplyPreEdits" : "You are correct that Watson showcased speech recognition, and building answers before converting them into speech. However, it also utilized probability in decision-making and information extraction, making all options (a, b, c, and d) accurate. Watson used probability to determine the most likely correct answer based on available information."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "A",
+            "informationProvided" : "Watson was capable of doing all of the above. A, C, and D were mentioned in the video, while B is factual in its design.",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["A","A","B"],
+            "partialKBvsDomainStudentC": ["C","A","B"],
+            "fullKBvsDomainStudentC": ["A","A","B"],
+            
+            "noKBvsDomainStudentD" : ["A","C","A"],
+            "partialKBvsDomainStudentD": ["A","C","C"],
+            "fullKBvsDomainStudentD": ["A","C","A"]
+            
+        }
+    },
+    "q34": {
+        "question": "Big data was made widely available and useful for AI in the AI Becomes Scientific era due to: a) The World Wide Web b) The invention of Convolutional Neural Networks c) Expert systems d) The backpropagation algorithm",
+        "stage1": {
+            "answer" : "b: cnns are a popular deep learning model that drove forward many advances in ai",
+            "studentWhoAnswered": "D"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "You're correct about Convolutional Neural Networks (CNNs) being a significant advancement in AI. However, the availability of big data in the AI Becomes Scientific era is primarily due to the World Wide Web (a). CNNs contributed to AI's growth but were not the primary reason for big data's wide availability.",
+            "gptPartialKBReplyPostEdits": "That's partly correct! CNNs indeed advanced AI by providing insights for image and pattern recognition. However, big data's wide availability and usefulness for AI in the AI Becomes Scientific era was primarily due to the World Wide Web (a), which allowed massive data collection and sharing, enabling further AI advancements. The question concerned big data availability, so focusing on that aspect would provide a more complete answer.",
+            "gptFullKBReplyPostEdits": "You're correct that CNNs are an important deep learning model, but they were not the main driver for the availability of big data. The World Wide Web (option a) played a crucial role in making large datasets available and useful for AI in various forms like text, images, audio, and video.",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "You’re correct that CNNs are a popular deep learning model and that they were the precursor to many of the successes we have nowadays with deep learning; however, the emergence of the World Wide Web is what made big data available and useful. Researchers were able to collect and use data for machine learning models much quicker thanks to the World Wide Web. The correct answer is therefore a).",
+            "domainExpertAReplyPreEdits" : "Big data became widely available thanks to the web but also CNNs as training them led researchers to share the benchmarks in their publications.  So b) is correct but I would a) as well!",
+            "domainExpertBReplyPreEdits" : "You’re correct that CNNs are a popular deep learning model and that they were the precursor to many of the successes we have nowadays with deep learning, however the emergence of the World Wide Web is what made big data available and useful. Researchers were able to collect and use data for machine learning models much quicker thanks to the World Wide Web. The correct answer is therefore a).",
+            "gptNoKBReplyPreEdits" : "You're correct about Convolutional Neural Networks (CNNs) being a significant advancement in AI. However, the availability of big data in the AI Becomes Scientific era is primarily due to the World Wide Web (a). CNNs contributed to AI's growth but were not the primary reason for big data's wide availability.",
+            "gptPartialKBReplyPreEdits": "That's partly correct! CNNs indeed advanced AI by providing insights for image and pattern recognition. However, big data's wide availability and usefulness for AI in the AI Becomes Scientific era was primarily due to the World Wide Web (a), which allowed massive data collection and sharing, enabling further AI advancements. The question concerned big data availability, so focusing on that aspect would provide a more complete answer.",
+            "gptFullKBReplyPreEdits" : "You're correct that CNNs are an important deep learning model, but they were not the main driver for the availability of big data. The World Wide Web (option a) played a crucial role in making large datasets available and useful for AI in various forms like text, images, audio, and video."
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, as the World Wide Web made data easy to upload, transfer, and download. The other options are not direct mediums of exchange (but could have had arguable influence if stated correctly).",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["C","B","B"],
+            "partialKBvsDomainStudentC": ["C","B","B"],
+            "fullKBvsDomainStudentC": ["C","C","C"],
+            
+            "noKBvsDomainStudentD" : ["B","C","B"],
+            "partialKBvsDomainStudentD": ["C","C","C"],
+            "fullKBvsDomainStudentD": ["B","C","C"]
+            
+        }
+    },
+    "q35": {
+        "question": "Select all reasons that contributed to the successful implementation of Convolutional Neural Networks (CNNs) starting in 2011?  a) The invention of the backpropagation algorithm b) Powerful hardware like FPGA, GPUs, and TPUs c) The AI Spring d) The use of benchmark datasets and data repositories",
+        "stage1": {
+            "answer" : "c - the rise of cnns and other large complex artificial intelligence models is known as the ai spring",
+            "studentWhoAnswered": "C"
+        },
+        "stage2": {
+            "gptNoKBReplyPostEdits": "Your answer partially addresses the rise of CNNs as part of the AI Spring. However, for a more complete understanding, it's important to also consider the significant contributions of powerful hardware like GPUs, TPUs, and the availability of benchmark datasets, which played crucial roles in the successful implementation of CNNs. The backpropagation algorithm, although important, was invented earlier.",
+            "gptPartialKBReplyPostEdits": "Your answer is partially correct. The AI Spring has indeed contributed to the success of CNNs. However, other factors have played significant roles too, such as powerful hardware (GPUs, TPUs), the backpropagation algorithm, and the use of benchmark datasets. Consider all these aspects for a comprehensive understanding.",
+            "gptFullKBReplyPostEdits": "Your answer is partially correct. The AI Spring refers to the flourishing of AI in general. However, the more specific reasons for the successful implementation of CNNs starting in 2011 are powerful hardware like FPGA, GPUs, and TPUs (b), and the availability of benchmark datasets and data repositories (d). ",
+            "domainExpertAReplyPostEdits" : "",
+            "domainExpertBReplyPostEdits" : "The correct answers are a), b), c), and d). Backpropagation dates back to 1960s, but the majority of neural networks (including the early CNNs in 2011) uses it today. Without powerful hardware, the development and training time of CNNs and their performance (e.g., due to batch-size) wouldn't be the same. Having benchmark datasets instead of small-scale toy examples played a role in accelerating research and development too. And of course, all of this happened during the AI Spring!",
+            "domainExpertAReplyPreEdits" : "The rise of CNN is due to a), b) and d).  c) the AI spring is a consequence of the retour of AI.",
+            "domainExpertBReplyPreEdits" : "The correct answer is a), b), c), and d). Backpropagation dates back to 1960s, but the majority of NNs (including the early CNNs in 2011) uses today. Without powerful hardware, the development and training time of CNNs, and their performance (e.g., due to batch-size) wouldn't be the same. Benchmark datasets instead of small-scale toy examples played a role in accelerating research and development too. And of course, all of this happened during the AI Spring!",
+            "gptNoKBReplyPreEdits" : "Your answer partially addresses the rise of CNNs as part of the AI Spring. However, for a more complete understanding, it's important to also consider the significant contributions of powerful hardware like GPUs, TPUs, and the availability of benchmark datasets, which played crucial roles in the successful implementation of CNNs. The backpropagation algorithm, although important, was invented earlier.",
+            "gptPartialKBReplyPreEdits": "Your answer is partially correct. The AI Spring has indeed contributed to the success of CNNs. However, other factors have played significant roles too, such as powerful hardware (GPUs, TPUs), the backpropagation algorithm, and the use of benchmark datasets. Consider all these aspects for a comprehensive understanding.",
+            "gptFullKBReplyPreEdits" : "Your answer partially correct. The AI Spring refers to the flourishing of AI in general. However, the more specific reasons for the successful implementation of CNNs starting in 2011 are powerful hardware like FPGA, GPUs, and TPUs (b), and the availability of benchmark datasets and data repositories (d). Keep up the good work and focus on understanding each contributing factor!"
+        },
+        "stage3": {
+            "domainExpertResponseCompared" : "B",
+            "informationProvided" : "A, B, and D all contributed to the efficiency and accuracy of CNNs. C may be valid if argued well (it isn't a direct reason for the successful implementation but the movement as a whole could have indirect assisted it).",
+
+            "noKBvsDomainStudentA" : [],
+            "partialKBvsDomainStudentA": [],
+            "fullKBvsDomainStudentA": [],
+            
+            "noKBvsDomainStudentB" : [],
+            "partialKBvsDomainStudentB": [],
+            "fullKBvsDomainStudentB": [],
+
+            "noKBvsDomainStudentC" : ["C","A","B"],
+            "partialKBvsDomainStudentC": ["B","B","B"],
+            "fullKBvsDomainStudentC": ["B","B","B"],
+            
+            "noKBvsDomainStudentD" : ["B","B","B"],
+            "partialKBvsDomainStudentD": ["B","B","B"],
+            "fullKBvsDomainStudentD": ["A","A","C"]
+            
+        }
+    }
+}
