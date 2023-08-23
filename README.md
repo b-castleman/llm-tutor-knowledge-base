@@ -39,8 +39,9 @@ The resultant data from Stages #2 and #3, along with some figures presented in C
 - `parsedData.mat`: As previously described, it is the processed data from the `results.json` file. It contains the counts of all reply choices for each pedagogical category in each intelligent tutor.
 - `table1Creation.m`: This file creates Table 1 from Castleman and Turkcan (2023). It also saves the table as `table1.csv`.
 - `table1.csv`: Table 1 from Castleman and Turkcan (2023), as aforementioned.
-- `figure3Creation.m`: This file creates Figure 3 from Castleman and Turkcan (2023). IT also saves the table as `figure3.pdf`.
+- `figure3Creation.m`: This file creates Figure 3 from Castleman and Turkcan (2023). It also saves the figure as `figure3.pdf`.
 - `figure3.pdf`: Figure 3 from Castleman and Turkcan (2023), as aforementioned.
+- `figure1.pdf`: Figure 1 from Castleman and Turkcan (2023). This figure was created manually in drawio and does not have any source code.
 
 
 
