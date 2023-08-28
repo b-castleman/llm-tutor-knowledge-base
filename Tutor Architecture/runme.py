@@ -16,11 +16,11 @@ questionBank = [{'q':'What characteristics are shared by both biological and art
                  'a':'A, C: biological neurons have these properties and artificial neurons try to mimic them'}]
 
 # Define tutors
-tutorNoKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 3, topicsInformationIncluded=False, lectureMaterialIncluded=False)
-tutorPartialKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 3, topicsInformationIncluded=True, lectureMaterialIncluded=False)
+tutorNoKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 4, topicsInformationIncluded=False, lectureMaterialIncluded=False)
+tutorPartialKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 4, topicsInformationIncluded=True, lectureMaterialIncluded=False)
 
 # Ensure docker is running, otherwise the Haystack instantiation will run into an error
-tutorWKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 3, topicsInformationIncluded=True, lectureMaterialIncluded=True)
+tutorWKB = Tutor(API_KEY = API_KEY, studentName = studentName, lessonSubject = lessonSubject, model = 4, topicsInformationIncluded=True, lectureMaterialIncluded=True)
 
 # Iterate through questions & answers, then assess them
 for i in range(len(questionBank)):
