@@ -309,7 +309,7 @@ class Tutor:
 
         self.createLectureInformationParseFile()
 
-    ''' Generate keywords of all the lecture material.'''
+    ''' Generate keywords for the specific subtopic given by the createKeywordsFile() method.'''
     def createKeywordsFromInformation(self,encoding,name,information):
             background = "You are a keyword generator. Your job is to generate keywords that students might use about certain topics when discussing them so that information can be retrieved."
             prompt = 'You are creating information about the subtopic called "' + name + '", a subtopic of the topic "' + self.topicsList[encoding] + '", which is a part of the lesson subject "' + self.lessonSubject + '". Keywords should be outputted in the format [<keyword 1>, <keyword 2>,...]. Nothing else should be outputted. Please create an exhaustive keyword list for the following lecture material:\n\n' + information
@@ -361,7 +361,7 @@ class Tutor:
             json.dump(outMapping, outfile)
 
 
-
+    ''' Initializes Haystack from the Tutor Constructor. This code is adapted from https://github.com/deepset-ai/haystack/blob/main/examples/basic_qa_pipeline.py '''
     def haystackInitialization(self):
         if not self.lectureMaterialIncluded:
             return
@@ -417,7 +417,7 @@ class Tutor:
 
         self.pipeline = pipeline
 
-
+    ''' Given a list of strings from the tutor (i..e the question and the answer), return the relevant lecture material. This is the overarching function that determines lecture material inclusion. Please note it calls all the functions that are defined below to accomplish its task. '''
     def stringListToInformationHaystack(self,strList):
         ''' From a list of strings, outputs all lines of relevant informaton determined by Haystack '''
         file_path = './HaystackSearch/processedLectureMaterial.txt'
@@ -447,7 +447,7 @@ class Tutor:
         return outInformation
 
 
-    ############### Haystack Helper Functions #############
+   ''' Return the line numbers for the information that Haystack finds relevant. It takes this information in as an input. Multiple lines may be found as a result of the implementation. '''
     def findLineNumber(self, context: str):
         file_path = './HaystackSearch/processedLectureMaterial.txt'
         with open(file_path, 'r') as file:
@@ -459,6 +459,7 @@ class Tutor:
 
         return ls
 
+    ''' Multiple outputs are likely to be given by Haystack. As a result, we choose to use every output to concatenate the relevant information and feed it all back for GPT concatenation.'''
     def obtainLineNumber(self,prediction):
         answers = prediction["answers"]
         outLineNumberList = []
@@ -469,7 +470,7 @@ class Tutor:
         return outLineNumberList
 
 
-
+    ''' Given the question and answer, yields all relevant information in a format ready for GPT concatenation '''
     def haystackLectureMaterialConcatenationForCustomQuestionTest(self,question,answer):
         ''' Keyword detection to see if any lecture material should be concatenated to the GPT request '''
         # If lecture material concatenation is off, just return an empty list
