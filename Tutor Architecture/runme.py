@@ -1,7 +1,7 @@
 from Tutor import *
 import time
 
-# Obtain the OpenAI API key. Please place your Open AI API key in the '.\Tutor Architecture' directory in a file named API_KEY.txt for this to work. Or, just replace this code block with API_KEY = <your open AI API key>
+# Obtain the OpenAI API key. Please place your Open AI API key in the './Tutor Architecture' directory in a file named API_KEY.txt for this to work. Or, just replace this code block with API_KEY = <your open AI API key>
 with open('API_KEY.txt', 'r') as file:
     API_KEY = file.read()
 
