@@ -4,7 +4,8 @@ load('parsedData.mat')
 
 % Define the figure and its size
 f = figure(1);
-f.Position = [50 50 540 950];
+f.Position = [50 50 620 955];
+f.PaperSize = [8.9 14];
 
 % Define the subplot names
 caPedagogies = {'a)','b)','c)'}; % note, each subplot is a different pedagogy
@@ -49,24 +50,24 @@ ylim([0,60]);
 
 
 % Set titles, legends, and labels
-title(caPedagogies{1},'FontName','TimesNewRoman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
+title(caPedagogies{1},'FontName','Times New Roman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
 
 subCategories = {'Intelligent Tutor Preference','Domain Expert Preference','No Clear Preference'};
-legend(subCategories,'location','ne','FontName','Times New Roman','FontSize',16)
+legend(subCategories,'location','ne','FontName','Times New Roman','FontWeight','Bold','FontSize',16)
 
 
 
 % Set formatting and fonts
 ytickformat(gca,'percentage');
 
-set(gca,'FontName', 'Times New Roman');
-set(sp1,'FontName','TimesNewRoman','FontSize',16);
+set(gca,'FontName', 'Times New Roman','FontWeight','Bold');
+set(sp1,'FontName','Times New Roman','FontSize',16);
 
 xticklabel_fs = get(gca,'XTickLabel');
-set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
 yticklabel_fs = get(gca,'YTickLabel');
-set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
 %% Subplot 2 - Understanding the student
 sp2 = subplot(3,1,2);
@@ -100,19 +101,19 @@ end
 ylim([0,60]);
 
 % Label and title the plot
-ylabel('Ratings Count (Percentage)','FontName','TimesNewRoman','FontSize',18);
+ylabel('Ratings Count (Percentage)','FontName','Times New Roman','FontSize',18);
 
-title(caPedagogies{2},'FontName','TimesNewRoman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
+title(caPedagogies{2},'FontName','Times New Roman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
 
 % Formatting and fonts
 ytickformat(gca,'percentage')
-set(sp2,'FontName','TimesNewRoman','FontSize',16);
+set(sp2,'FontName','Times New Roman','FontSize',16);
 
 xticklabel_fs = get(gca,'XTickLabel');
-set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
 yticklabel_fs = get(gca,'YTickLabel');
-set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
 %% Subplot 3 - Helping the student
 sp3 = subplot(3,1,3);
@@ -146,13 +147,12 @@ end
 ylim([0,60]);
 
 % Set labels
-xlabel(sp3,'Knowledge Base Hierarchy','FontName','TimesNewRoman','FontSize',18);
-title(caPedagogies{3},'FontName','TimesNewRoman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
+title(caPedagogies{3},'FontName','Times New Roman','FontSize',16,'Position',[-0.298364128270219,60.30125523012554,1.4e-14]);
 
 % Set formatting and fonts
 ytickformat(gca,'percentage')
 
-set(sp3,'FontName','TimesNewRoman','FontSize',16);
+set(sp3,'FontName','Times New Roman','FontSize',16);
 
 % Set the positions fo each subplot
 offset = -0.29;
@@ -162,12 +162,12 @@ sp3.set('Position',[0.135118793099298 0.71593853427896+2*offset 0.76988120690070
 
 % Final formatting of subplot 3
 xticklabel_fs = get(gca,'XTickLabel');
-set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'XTickLabel', xticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
 yticklabel_fs = get(gca,'YTickLabel');
-set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman');
+set(gca, 'YTickLabel', yticklabel_fs, 'FontName', 'Times New Roman','FontWeight','Bold');
 
-set(findall(gcf,'type','text'), 'fontname', 'times');
+set(findall(gcf,'type','text'), 'fontname', 'Times New Roman','FontWeight','Bold');
 
 % Save this plot as a pdf
 print('figure3.pdf','-dpdf','-fillpage')
