@@ -14,6 +14,12 @@ pip install openai # openai gpt-4 api access
 pip install 'farm-haystack[all]' # haystack and all of its dependencies; this will take a few minutes
 ```
 
+3. Create an OpenAI API key. Then place it in a text file in the main directory titled `API_KEY.txt`. Alternatively, replace lines 5-6 in the `runme.py` file with a string of this key instead.
+
+- https://platform.openai.com/account/api-keys
+
+4. Run the `runme.py` file to run all three intelligent tutors and obtain their assessments of the question/answer detailed in the `questionBank` variable. Feel free to change the question, answer, or any supervisor information (detailed below in the `SupervisorFiles` directory) included.
+
 ## Tutor Code
 The code for the intelligent tutors is located in the directory `'./Tutor Architecture'`. The files found here are as listed:
 
