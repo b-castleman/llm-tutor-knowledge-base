@@ -4,8 +4,9 @@
 The following is a repository for the code and data from Castleman and Turkcan (2024). The paper URL will be included below once it becomes available.
 
 ## Setup
-1. Install Docker (required for Haystack's containers)
-https://docs.docker.com/engine/install/
+1. Install Docker and ensure it is running (required for Haystack's containers)
+
+- https://docs.docker.com/engine/install/
 
 2. Install all required Python packages
 ```
