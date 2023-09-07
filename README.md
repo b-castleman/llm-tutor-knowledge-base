@@ -3,6 +3,16 @@
 ## Conference Paper
 The following is a repository for the code and data from Castleman and Turkcan (2024). The paper URL will be included below once it becomes available.
 
+## Setup
+1. Install Docker (required for Haystack's containers)
+https://docs.docker.com/engine/install/
+
+2. Install all required Python packages
+```
+pip install openai # openai gpt-4 api access
+pip install 'farm-haystack[all]' # haystack and all of its dependencies; this will take a few minutes
+```
+
 ## Tutor Code
 The code for the intelligent tutors is located in the directory `'./Tutor Architecture'`. The files found here are as listed:
 
