@@ -1,6 +1,6 @@
 # Examining the Influence of Varied Levels of Domain Knowledge Base Inclusion in GPT-based Intelligent Tutors
 
-## Conference Paper
+## Paper
 The following is a repository for the code and data from Castleman and Turkcan (2023). The paper URL will be included below once it becomes available.
 
 ## Setup
