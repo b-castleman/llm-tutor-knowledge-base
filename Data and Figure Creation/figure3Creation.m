@@ -1,4 +1,4 @@
-%% This script produces Figure 3 from Castleman and Turkcan (2024).
+%% This script produces Figure 3 from Castleman and Turkcan (2023).
 % Load the data
 load('parsedData.mat')
 
