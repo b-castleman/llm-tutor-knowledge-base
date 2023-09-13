@@ -1,4 +1,4 @@
-%% This script produces Table 1 from the paper Castleman and Turkcan (2024). The output table is a cell array titled "ca"
+%% This script produces Table 1 from the paper Castleman and Turkcan (2023). The output table is a cell array titled "ca"
 % Load the data
 load('parsedData.mat')
 
