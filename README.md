@@ -1,7 +1,7 @@
 # Examining the Influence of Varied Levels of Domain Knowledge Base Inclusion in GPT-based Intelligent Tutors
 
 ## Paper
-The following is a repository for the code and data from Castleman and Turkcan (2023). The paper URL will be included below once it becomes available.
+The following is a repository for the code and data from Castleman and Turkcan (2023). The paper URL is located here: https://arxiv.org/abs/2309.12367
 
 ## Setup
 1. Install Docker and ensure it is running (required for Haystack's containers)
